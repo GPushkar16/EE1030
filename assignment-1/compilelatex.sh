@@ -11,3 +11,4 @@ fi
 
 # Run pdflatex on the LaTeX file
 pdflatex "$LATEX_FILE"
+evince main.pdf &
