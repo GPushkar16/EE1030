@@ -18,4 +18,6 @@ plt.text(B[0], B[1], 'B(6,4)')
 plt.text(C[0], C[1], 'C(8, 7)')
 plt.text(D[0], D[1], 'D(5, 6)')
 
+plt.grid()
+plt.axis('equal')
 plt.show()
