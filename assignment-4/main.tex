@@ -57,7 +57,7 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question:} The construction of a triangle $ABC$, given that $BC=6cm, \angle B=45^\circ$ is not possible when difference of $AB$ and $AC$ is equal to\begin{enumerate}
+\textbf{Question:} The construction of a triangle $ABC$, given that $BC=6cm, \angle B=45\degree$ is not possible when difference of $AB$ and $AC$ is equal to\begin{enumerate}
 	\item $6.9cm$
 	\item $5.2cm$
 	\item $5.0cm$
@@ -67,7 +67,7 @@
 \begin{table}[h!]    
   \centering
   \input{table/Table.tex}
-  \caption{Variables Used}
+  \caption{Variables and given data}
   \label{tab 3.2.15}
 \end{table}
 Using the cosine formula in $\triangle ABC$,\\
@@ -76,8 +76,23 @@ Using the cosine formula in $\triangle ABC$,\\
 	\brak{k+c}^2 &= a^2 + c^2 - 2ac\cos B \\
 	\implies c &= \frac{a^2 - k^2}{2\brak{k + a\cos B}}\\
 	a &= 6cm \\
-	\angle B &= 45^\circ \\
+	\angle B &= 45\degree \\
 	c &= \frac{36-k^2}{2\brak{k + 3\sqrt{2}}}\\	
 \end{align}
 Therefore, $k \leq 6cm $.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{figs/plot1.png}
+	\label{Fig}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{figs/plot2.png}
+	\label{Fig}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{figs/plot3.png}
+	\label{Fig}
+\end{figure}
 \end{document}
