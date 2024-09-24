@@ -8,9 +8,31 @@ import matplotlib.image as mpimg
 from funcs import line_gen
 import params
 
-A = np.array(([0.34 , 0.34]))
-B = np.array(([0, 0]))
-C = np.array(([6, 0]))
+# Initialize lists to hold the points
+A = []
+B = []
+C = []
+
+# Read the output.txt file
+with open("output1.txt", "r") as file:
+    for line in file:
+        # Split the line by spaces
+        parts = line.strip().split()
+        point_id = parts[0]  # The first part is the point identifier
+        values = list(map(float, parts[1:]))  # Convert the rest to floats
+        
+        # Assign values to respective points
+        if point_id == 'A':
+            A = values
+        elif point_id == 'B':
+            B = values
+        elif point_id == 'C':
+            C = values
+
+# Convert lists to NumPy arrays
+A = np.array(A)
+B = np.array(B)
+C = np.array(C)
 
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)

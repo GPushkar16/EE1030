@@ -1,1 +1,0 @@
-While using cosine formula for finding side AC we will find that k must be less than 6.0 cm
