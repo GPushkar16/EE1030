@@ -1,70 +1,52 @@
-import sys
+import sys                                          # for path to external scripts
+sys.path.insert(0, '/home/pushkar/matgeo/codes/CoordGeo')        # path to my scripts
 import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
-from funcs import line_gen
+from mpl_toolkits.mplot3d import Axes3D
 
-# Initialize lists to hold the points for each output file
-points = {'A': [], 'B': [], 'C': []}
-files = ['output1.txt', 'output2.txt', 'output3.txt']
+# local imports
+from line.funcs import *
+from triangle.funcs import *
+# Read data from file
+c_values = [0.48, 0.6, 1.21]
+A_x_values = []
+A_y_values = []
 
-# Function to read points from a file
-def read_points_from_file(filename):
-    local_points = {'A': [], 'B': [], 'C': []}
-    try:
-        with open(filename, "r") as file:
-            for line in file:
-                parts = line.strip().split()
-                point_id = parts[0]  # The first part is the point identifier
-                values = list(map(float, parts[1:]))  # Convert the rest to floats
-                if point_id in local_points:
-                    local_points[point_id] = values
-    except FileNotFoundError:
-        print(f"Error: The file '{filename}' was not found.")
-        sys.exit(1)
-    except ValueError:
-        print(f"Error: Could not convert data to float in '{filename}'. Please check the file format.")
-        sys.exit(1)
+with open('results.txt', 'r') as file:
+    for line in file:
+        c, A_x, A_y, _ = map(float, line.strip().split(','))
+        A_x_values.append(A_x)
+        A_y_values.append(A_y)
+
+# Create plots for each c value
+
+# Create and save three separate plots
+for i, c in enumerate(c_values):
+    plt.figure(figsize=(5, 5))
     
-    return local_points
-
-# Read points from each file and store in the points dictionary
-for filename in files:
-    file_points = read_points_from_file(filename)
-    points['A'].append(file_points['A'])
-    points['B'].append(file_points['B'])
-    points['C'].append(file_points['C'])
-
-# Convert lists to NumPy arrays
-points_A = [np.array(p) for p in points['A']]
-points_B = [np.array(p) for p in points['B']]
-points_C = [np.array(p) for p in points['C']]
-
-# Create a plot for each triangle
-for i in range(len(points_A)):
-    plt.figure(figsize=(10, 8))
+    # Coordinates of point A
+    A_x = A_x_values[i]
+    A_y = A_y_values[i]
     
-    x_AB = line_gen(points_A[i], points_B[i])
-    x_BC = line_gen(points_B[i], points_C[i])
-    x_AC = line_gen(points_A[i], points_C[i])
-
-    # Plot the lines
-    plt.plot(x_AB[0, :], x_AB[1, :], label='AB', color='blue')
-    plt.plot(x_BC[0, :], x_BC[1, :], label='BC', color='green', linestyle='--')
-    plt.plot(x_AC[0, :], x_AC[1, :], label='AC', color='red', linestyle=':')
-
-    # Label points with their coordinates
-    plt.text(points_A[i][0], points_A[i][1], f'A({points_A[i][0]:.2f},{points_A[i][1]:.2f})', fontsize=10, ha='right')
-    plt.text(points_B[i][0], points_B[i][1], f'B({points_B[i][0]:.2f},{points_B[i][1]:.2f})', fontsize=10, ha='right')
-    plt.text(points_C[i][0], points_C[i][1], f'C({points_C[i][0]:.2f},{points_C[i][1]:.2f})', fontsize=10, ha='right')
-
-    # Set plot labels and title
-    plt.xlabel('X-coordinate')
-    plt.ylabel('Y-coordinate')
-    plt.title(f'Plot of Triangle ABC from {files[i]}')
+    A= np.array([A_x, A_y])
+    C= np.array([6, 0])
+    B = np.array([0, 0])
+    # Plot points A, B, and C
+    x_AB = line_gen(A,B)
+    x_BC = line_gen(B,C)
+    x_AC = line_gen(A,C)
+    
+    plt.plot(x_AB[0, :], x_AB[1, :], label='$AB$')
+    plt.plot(x_BC[0, :], x_BC[1, :], label='$BC$')
+    plt.plot(x_AC[0, :], x_AC[1, :], label='$CA$')
+    plt.text(A_x, A_y, f'A({A_x:.2f}, {A_y:.2f})', fontsize=10, ha='right')
+    plt.text(B[0], B[1], 'B(0,0)')
+    plt.text(C[0], C[1], 'C(6,0)')
+    plt.title(f'Plot for c = {c}')
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
     plt.legend()
-    plt.grid(True)
-
-    # Save the plot
-    plt.savefig(f'plot_triangle_{i+1}.png')
-    plt.close()  # Close the figure to free up memory
-
+    plt.grid()
+    plt.savefig(f'Plot_for_c_{c:.2f}.png')
+    plt.close()  # Close the figure to avoid display
