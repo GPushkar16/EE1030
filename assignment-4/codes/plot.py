@@ -1,5 +1,4 @@
 import sys
-sys.path.insert(0, '/home/matgeo/codes/CoordGeo/line')
 import numpy as np
 import matplotlib.pyplot as plt
 from funcs import line_gen
@@ -40,35 +39,32 @@ points_A = [np.array(p) for p in points['A']]
 points_B = [np.array(p) for p in points['B']]
 points_C = [np.array(p) for p in points['C']]
 
-# Create the plot
-plt.figure(figsize=(10, 8))
-
-# Colors for different files
-colors = ['blue', 'green', 'red']
-labels = ['Output 1', 'Output 2', 'Output 3']
-
+# Create a plot for each triangle
 for i in range(len(points_A)):
+    plt.figure(figsize=(10, 8))
+    
     x_AB = line_gen(points_A[i], points_B[i])
     x_BC = line_gen(points_B[i], points_C[i])
     x_AC = line_gen(points_A[i], points_C[i])
 
-    plt.plot(x_AB[0, :], x_AB[1, :], label=f'AB ({labels[i]})', color=colors[i])
-    plt.plot(x_BC[0, :], x_BC[1, :], label=f'BC ({labels[i]})', color=colors[i], linestyle='--')
-    plt.plot(x_AC[0, :], x_AC[1, :], label=f'AC ({labels[i]})', color=colors[i], linestyle=':')
+    # Plot the lines
+    plt.plot(x_AB[0, :], x_AB[1, :], label='AB', color='blue')
+    plt.plot(x_BC[0, :], x_BC[1, :], label='BC', color='green', linestyle='--')
+    plt.plot(x_AC[0, :], x_AC[1, :], label='AC', color='red', linestyle=':')
 
     # Label points with their coordinates
     plt.text(points_A[i][0], points_A[i][1], f'A({points_A[i][0]:.2f},{points_A[i][1]:.2f})', fontsize=10, ha='right')
     plt.text(points_B[i][0], points_B[i][1], f'B({points_B[i][0]:.2f},{points_B[i][1]:.2f})', fontsize=10, ha='right')
     plt.text(points_C[i][0], points_C[i][1], f'C({points_C[i][0]:.2f},{points_C[i][1]:.2f})', fontsize=10, ha='right')
 
-# Set plot labels and title
-plt.xlabel('X-coordinate')
-plt.ylabel('Y-coordinate')
-plt.title('Plot of Triangles ABC from Multiple values pf AB-AC')
-plt.legend()
-plt.grid(True)
+    # Set plot labels and title
+    plt.xlabel('X-coordinate')
+    plt.ylabel('Y-coordinate')
+    plt.title(f'Plot of Triangle ABC from {files[i]}')
+    plt.legend()
+    plt.grid(True)
 
-# Save the plot
-plt.savefig('plot_triangles.png')
-plt.show()  # Show the plot in addition to saving it
+    # Save the plot
+    plt.savefig(f'plot_triangle_{i+1}.png')
+    plt.close()  # Close the figure to free up memory
 
