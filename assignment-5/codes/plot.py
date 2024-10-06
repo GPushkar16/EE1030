@@ -29,9 +29,6 @@ plt.plot(x_vals, y_vals, label="x^2 = 4y")
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Parabola: x^2 = 4y')
-#Generating  line
-x_R1 = line_gen(A,B);
-
 
 # use set_position
 ax = plt.gca()
@@ -41,7 +38,17 @@ ax.spines['right'].set_color('none')
 ax.spines['bottom'].set_position('zero')
 
 #Plotting all line
-plt.plot(x_R1[0,:],x_R1[1,:],label='$line$')
+
+# Define the range of y values
+y = np.linspace(-1, 2, 100)
+
+# Define the equation x = 4y - 2
+x = 4 * y - 2
+
+# Create the plot
+plt.plot(x, y, label='x = 4y - 2')
+
+
 
 #Labeling the coordinates
 tri_coords = np.vstack((A,B)).T
