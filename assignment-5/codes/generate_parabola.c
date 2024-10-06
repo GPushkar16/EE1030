@@ -13,7 +13,7 @@ int main() {
     // Generate points for the parabola x^2 = 4y
     float x, y;
     float step = 0.1;  // Step size for x
-    float x_max = 10;  // Maximum value of x (you can adjust as needed)
+    float x_max = 5;  // Maximum value of x (you can adjust as needed)
 
     for (x = -x_max; x <= x_max; x += step) {
         y = (x * x) / 4.0;
