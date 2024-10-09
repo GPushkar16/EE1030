@@ -1,0 +1,130 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{22-07-2021 Shift-2}}
+\author{AI24BTECH11012- Pushkar Gudla}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}
+
+
+\begin{enumerate}
+    \item If the sum and the product of mean and variance of a binomial distribution are 24 and 128 respectively, then the probability of one or two successes is:
+    \begin{enumerate}
+        \item $\frac{33}{2^{32}}$
+        \item $\frac{33}{2^{29}}$
+        \item $\frac{33}{2^{28}}$
+        \item $\frac{33}{2^{27}}$
+    \end{enumerate}
+    
+    \item If the numbers appeared on the two throws of a fair six-faced die are $\alpha$ and $\beta$, then the probability that $x^2 + \alpha x + \beta > 0$ for all $x \in \mathbb{R}$ is:
+    \begin{enumerate}
+        \item $\frac{17}{36}$
+        \item $\frac{4}{9}$
+        \item $\frac{1}{2}$
+        \item $\frac{19}{36}$
+    \end{enumerate}
+
+    \item The number of solutions of $|\cos x| = \sin x$ such that $-4\pi \leq x \leq 4\pi$ is:
+    \begin{enumerate}
+        \item $4$
+        \item $6$
+        \item $8$
+        \item $12$
+    \end{enumerate}
+
+    \item A tower $PQ$ stands on a horizontal ground with base $Q$ on the ground. The point $R$ divides the tower in two parts such that $QR = 15 \, m$. If from a point $A$ on the ground the angle of elevation of $R$ is $60^\circ$ and the part $PR$ of the tower subtends an angle of $15^\circ$ at $A$, then the height of the tower is:
+    \begin{enumerate}
+        \item $5(2\sqrt{3} + 3)$m
+        \item $5(\sqrt{3} + 3)$m
+        \item $10(\sqrt{3} + 1)$m
+        \item $10(2\sqrt{3} + 1)$m
+    \end{enumerate}
+
+    \item Which of the following statements is a tautology?
+    \begin{enumerate}
+        \item $\brak{\brak{\sim p} \lor q} \implies p$
+        \item $p \implies \brak{\brak{\sim p} \lor q}$
+        \item $\brak{\brak{\sim p} \lor q} \implies q$
+        \item $q \implies \brak{\brak{\sim p} \lor q}$
+    \end{enumerate}
+
+    \item Let $A = \begin{pmatrix} 2 & -1 & -1 \\ 1 & 0 & -1 \\ 1 & -1 & 0 \end{pmatrix}$ and $B = A - I$. If $\omega = \frac{\sqrt{3}i - 1}{2}$, then the number of elements in the set $\{n \in \{1, 2, ..., 100\} : A^n + (\omega B)^n = A + B\}$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item The letters of the word "MANKIND" are written in all possible orders and arranged in serial order as in an English dictionary. Then the serial number of the word "MANKIND" is \rule{2.5cm}{0.4pt}.
+    
+    \item If the maximum value of the term independent of $t$ in the expansion of $\brak{t^{2}x^{\frac{1}{5}}+\frac{\brak{1-x}^{\frac{1}{10}}}{t}}^{15}$, $x \geq 0$, is $K$, then $8K$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item Let $a, b$ be two non-zero real numbers. If $p$ and $r$ are the roots of the equation $x^2 - 8ax + 2a = 0$ and $q$ and $s$ are the roots of the equation $x^2 + 12bx + 6b = 0$, such that $\frac{1}{p}, \frac{1}{q}, \frac{1}{r}, \frac{1}{s}$ are in A.P., then $a^{-1} - b^{-1}$ is equal to \rule{2.5cm}{0.4pt}
+    
+    \item Let $a_1 = b_1 = 1$, $a_n = a_{n-1} + 2$ and $b_n = a_n + b_{n-1}$ for every natural number $n \geq 2$. Then $\sum_{n=1}^{15} a_n b_n$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item Let $    f(x) =
+    \begin{cases}
+        |4x^2-8x+5| & , \text{if } 8x^2-6x+1 \geq 0 \\
+        [4x^2-8x+5] & , \text{if } 8x^2-6x+1 < 0
+    \end{cases}$\\where $[\alpha]$ denotes the greatest integer less than or equal to $\alpha$. Then the number of points in $\mathbb{R}$ where $f$ is not differentiable is \rule{2.5cm}{0.4pt}.
+    
+    \item If $\lim_{n \to \infty}\frac{\brak{n+1}^{k-1}}{n^{k+1}}[\brak{nk+1} + \brak{nk+2} + \ldots + \brak{nk+n}] = 33\lim_{n\to \infty}\frac{1}{n^{k+1}}[1^k+2^k+3^k+\ldots+n^k]$, then the integral value of $k$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item Let the equation of two diameters of a circle $x^2 + y^2 - 2x + 2fy + 1 = 0$ be $2px - y = 1$ and $2x + py = 4p$. Then the slope $m \in (0, \infty)$ of the tangent to the hyperbola $3x^2 - y^2 = 3$ passing through the center of the circle is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item The sum of diameters of the circles that touch (i) the parabola $75x^2 = 64(5y - 3)$ at the point $\left(\frac{8}{5}, \frac{6}{5}\right)$ and (ii) the y-axis, is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item The line of shortest distance between the lines $\frac{x-2}{0} = \frac{y-1}{1} = \frac{z}{1}$ and $\frac{x-3}{2} = \frac{y-5}{2} = \frac{z-1}{1}$ makes an angle of $\cos^{-1}\brak{\sqrt{\frac{2}{27}}}$ with the plane $P: ax - y - z = 0$ ($a > 0$). If the image of the point $(1, 1, -5)$ in the plane $P$ is $(\alpha, \beta, \gamma)$, then $\alpha + \beta - \gamma$ is equal to \rule{2.5cm}{0.4pt}.
+\end{enumerate}
+
+\end{document}
+
