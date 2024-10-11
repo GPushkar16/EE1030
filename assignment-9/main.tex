@@ -1,0 +1,127 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{30-01-2023 shift-2(16-20)}}
+\author{AI24BTECH11012- Pushkar Gudla}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}
+
+\begin{enumerate}
+    \item If a plane passes through the points (-1, k, 0), (2, k, -1), (1, 1, 2) and is parallel to the line $\frac{x-1}{1} = \frac{2y+1}{2} = \frac{z+1}{-1}$, then the value of $\frac{k^2+1}{(k-1)(k-2)}$ is
+    \begin{enumerate}
+        \item $\frac{17}{5}$
+        \item $\frac{5}{17}$
+        \item $\frac{6}{13}$
+        \item $\frac{13}{6}$
+    \end{enumerate}
+    
+    \item Let $a$, $b$, $c > 1$, $a^3$, $b^3$, and $c^3$ be in A.P., and $\log_ab$, $\log_ca$, and $\log_bc$ be in G.P. If the sum of the first 20 terms of an A.P., whose first term is $\frac{a+4b+c}{3}$ and the common difference is $\frac{a+8b-c}{10}$, is $-444$, then $abc$ is equal to
+    \begin{enumerate}
+        \item $343$
+        \item $216$
+        \item $\frac{343}{8}$
+        \item $\frac{125}{8}$
+    \end{enumerate}
+
+    \item Let $S$ be the set of all values of $a_1$ for which the mean deviation about the mean of 100 consecutive positive integers $a_1, a_2, a_3, \dots, a_{100}$ is 25. Then $S$ is
+    \begin{enumerate}
+        \item $\phi$
+        \item $\{99\}$
+        \item $\mathbb{N}$
+        \item $\{9\}$
+    \end{enumerate}
+
+    \item $\lim_{n \to \infty} \frac{3}{n}\brak{4+\brak{2+\frac{1}{n}}^2+\brak{2+\frac{2}{n}}^2 + \ldots + \brak{3-\frac{1}{n}}^2}$ is equal to
+    \begin{enumerate}
+        \item $12$
+        \item $\frac{19}{3}$
+        \item $0$
+        \item $19$
+    \end{enumerate}
+
+    \item For $\alpha, \beta \in \mathbb{R}$, suppose the system of linear equations\\$x - y + z = 5$\\ $2x + 2y + \alpha z = 8$\\ $3x - y + 4z = \beta$\\ has infinitely many solutions. Then $\alpha$ and $\beta$ are the roots of
+    \begin{enumerate}
+        \item $2x^2 - 10x + 16 = 0$
+        \item $2x^2 + 18x + 56 = 0$
+        \item $2x^2 - 18x + 56 = 0$
+        \item $2x^2 + 14x + 24 = 0$
+    \end{enumerate}
+    
+    \item The 50th root of a number $x$ is 12 and the 50th root of another number $y$ is 18. Then the remainder obtained on dividing $x + y$ by 25 is \rule{2.5cm}{0.4pt}.
+    
+    \item Let $A = \{1, 2, 3, 5, 8, 9\}$. Then the number of possible functions $f: A \to A$ such that $f(m \cdot n) = f(m) \cdot f(n)$ for every $m, n \in A$ with $m \cdot n \in A$ is \rule{2.5cm}{0.4pt}.
+    
+    \item Let $P(a_1, b_1)$ and $Q(a_2, b_2)$ be two distinct points on a circle with center $C(\sqrt{2}, \sqrt{3})$. Let $O$ be the origin and $OC$ be perpendicular to both $CP$ and $CQ$. If the area of the triangle $OCP$ is $\frac{\sqrt{35}}{2}$, then $a_1^2 + a_2^2 + b_1^2 + b_2^2$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item The 8th common term of the series\\$S_1 = 3 + 7 + 11 + 15 + 19 + \dots$\\$S_2 = 1 + 6 + 11 + 16 + 21 + \dots$\\is \rule{2.5cm}{0.4pt}.
+    
+    \item Let a line $L$ pass through the point $P(2, 3, 1)$ and be parallel to the line $x + 3y - 2z - 2 = 0 = x - y + 2z$. If the distance of $L$ from the point $(5, 3, 8)$ is $\alpha$, then $3\alpha^2$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item $\int \sqrt{\sec{2x} - 1} dx = \alpha\log \left| \cos{2x}+\beta+\sqrt{\cos{2x}\brak{1+\cos{\frac{1}{\beta}x}}} \right| + C$, then $\beta - \alpha$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item If the value of the real number $a > 0$ for which $x^2 - 5ax + 1 = 0$ and $x^2 - ax - 5 = 0$ have a common real root is $\frac{3}{\sqrt{2\beta}}$, then $\beta$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item The number of seven-digit odd numbers that can be formed using all the seven digits 1, 2, 2, 2, 3, 3, 5 is \rule{2.5cm}{0.4pt}.
+    
+    \item A bag contains six balls of different colors. Two balls are drawn in succession with replacement. The probability that both balls are of the same color is $p$. Next, four balls are drawn in succession with replacement, and the probability that exactly three balls are of the same color is $q$. If $p : q = m : n$, where $m$ and $n$ are coprime, then $m + n$ is equal to \rule{2.5cm}{0.4pt}.
+    
+    \item Let $A$ be the area of the region $\{(x, y) : y \geq x^2, y \geq \brak{1 - x}^2, y \leq 2x(1 - x)\}$. Then $540A$ is equal to \rule{2.5cm}{0.4pt}.
+    
+\end{enumerate}
+
+
+\end{document}
+
