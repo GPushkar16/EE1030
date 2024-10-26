@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  26 OCT 2024 12:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  26 OCT 2024 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1282,6 +1282,9 @@ LaTeX Warning: Label `fig:my_label' multiply defined.
 
 LaTeX Warning: Label `fig:my_label' multiply defined.
 
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1434,314 +1437,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/base/8r.enc}] [2] [3]
-
-! LaTeX Error: Environment circuitz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.381 \begin{circuitz}
-                      
-? 
-! Undefined control sequence.
-l.383 \draw
-            (1.5,16.75) to[R] (3.5,16.75);
-? 
-! Undefined control sequence.
-l.384 \draw
-            (1.5,16.75) to[sinusoidal voltage source, sources/symbol/rotate=...
-
-? 
-! Undefined control sequence.
-l.385 \draw
-            (1.5,15.25) to[C] (3.5,15.25);
-? 
-! Undefined control sequence.
-l.386 \draw
-            (3.5,16.75) to[L ] (3.5,15.25);
-? 
-! Undefined control sequence.
-l.387 \node
-            [font=\normalsize] at (4,15.75) {L};
-? 
-! Undefined control sequence.
-l.388 \node
-            [font=\normalsize] at (2.5,14.75) {C};
-? 
-! Undefined control sequence.
-l.389 \node
-            [font=\normalsize] at (1,16.25) {w};
-? 
-! Undefined control sequence.
-l.390 \node
-            [font=\normalsize] at (3,17.25) {R};
-? 
-! Undefined control sequence.
-\endcircuitikz ...er@layerlist@globally \endscope 
-                                                  \let \pgf@baseline =\pgf@s...
-l.391 \end{circuitikz}
-                      
-? 
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...globally \endgroup \hss \egroup 
-                                                  \pgf@restore@layerlist@fro...
-l.391 \end{circuitikz}
-                      
-? 
-! Extra \endgroup.
-\endpgfpicture ...p \pgfsys@discardpath \endgroup 
-                                                  \pgfsys@endscope \pgfsys@e...
-l.391 \end{circuitikz}
-                      
-? 
-! Extra \endgroup.
-\endpgfpicture ...pe \pgfsys@endpicture \endgroup 
-                                                  \hss \egroup \pgfsys@types...
-l.391 \end{circuitikz}
-                      
-? 
-! Too many }'s.
-\endpgfpicture ...dpicture \endgroup \hss \egroup 
-                                                  \pgfsys@typesetpicturebox ...
-l.391 \end{circuitikz}
-                      
-? 
-! Extra \endgroup.
-\endpgfpicture ...setpicturebox \pgfpic \endgroup 
-                                                  
-l.391 \end{circuitikz}
-                      
-? 
-! Extra \endgroup.
-\endcircuitikz ...global \endpgfpicture \endgroup 
-                                                  
-l.391 \end{circuitikz}
-                      
-? 
-
-! LaTeX Error: \begin{document} ended by \end{circuitikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.391 \end{circuitikz}
-                      
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.391 \end{circuitikz}
-                      
-? 
-! Infinite glue shrinkage found in a paragraph.
-<argument> ...hskip:D \c_zero_dim \fi: \tex_par:D 
-                                                  \hook_use:n {para/after}\@...
-l.392 
-      
-? 
-
-Overfull \hbox (18.95815pt too wide) in paragraph at lines 380--392
-\OT1/txr/m/n/12 (1.5,16.75) to[sinusoidal volt-age source, sources/sym-bol-/ro-
-tate=auto] (1.5,15.25); (1.5,15.25) to[C] (3.5,15.25);
- []
-
-[4]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.459 \item I
-             n the figure given below all phasors are with reference to the ...
-
-? 
-[5]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.539 \item A
-              3 V dc supply with an internal resistance of $2 \ohm$ supplies...
-
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.547 \item C
-             onsider the feedback control system shown below which is subjec...
-
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.593 \item A
-              three-phase squirrel cage induction motor has a starting torqu...
-
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.603 \item T
-             he matrix A given below is the node incidence matrix of a netwo...
-
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.623 \item A
-             n isolated $50$ Hz synchronous generator is rated at $15 MW$, w...
-
-? 
-[6]
-! Undefined control sequence.
-\enit@endenumerate ->\enit@after 
-                                 \endlist \ifx \enit@series \relax \else \if...
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@endenumerate ...\else \ifnum \enit@resuming 
-                                                  =\@ne \enit@setresumekeys ...
-l.631 \end{enumerate}
-                     
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.631 \end{enumerate}
-                     
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-<argument> enit@resume@series@\enit@series 
-                                           
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.631 \end{enumerate}
-                     
-? 
-! You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@endenumerate ...t \fi \ifnum \enit@resuming 
-                                                  =\thr@@ \enit@setresumekey...
-l.631 \end{enumerate}
-                     
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.631 \end{enumerate}
-                     
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   =
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.631 \end{enumerate}
-                     
-? 
-! Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.631 \end{enumerate}
-                     
-? 
-! You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.631 \end{enumerate}
-                     
-? 
-
-! LaTeX Error: \begin{document} ended by \end{enumerate}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.631 \end{enumerate}
-                     
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.631 \end{enumerate}
-                     
-? 
-[7] (./main.aux)
+f-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5] [6] [7] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1754,10 +1450,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 48363 strings out of 474222
- 1139202 string characters out of 5748734
- 1953975 words of memory out of 5000000
- 69803 multiletter control sequences out of 15000+600000
+ 48449 strings out of 474222
+ 1142130 string characters out of 5748734
+ 1958975 words of memory out of 5000000
+ 69883 multiletter control sequences out of 15000+600000
  637664 words of font info for 200 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  117i,11n,121p,1172b,1385s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1768,10 +1464,10 @@ onts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 80567 bytes).
+Output written on main.pdf (7 pages, 81679 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 93 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

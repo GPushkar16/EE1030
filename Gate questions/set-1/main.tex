@@ -378,18 +378,24 @@ emps};
 \end{enumerate}
 
 \item The R-L-C series circuit shown is supplied from a variable frequency voltage source. The admittance-locus of the R-L-C network at terminals AB for increasing frequency $w$ is
-\begin{circuitz}
-\tikzstyle{every node}=[font=\normalsize]
-\draw (1.5,16.75) to[R] (3.5,16.75);
-\draw (1.5,16.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (1.5,15.25);
-\draw (1.5,15.25) to[C] (3.5,15.25);
-\draw (3.5,16.75) to[L ] (3.5,15.25);
-\node [font=\normalsize] at (4,15.75) {L};
-\node [font=\normalsize] at (2.5,14.75) {C};
-\node [font=\normalsize] at (1,16.25) {w};
-\node [font=\normalsize] at (3,17.25) {R};
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (1,18.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (1,15.5);
+\draw (1,18.75) to[R] (5.25,18.75);
+\draw (1,15.5) to[C] (5.25,15.5);
+\draw (5.25,18.75) to[L ] (5.25,15.5);
+\node [font=\small] at (3,18.25) {$R$};
+\node [font=\small] at (2,17.25) {$$w$$};
+\node [font=\small] at (3,14.75) {$C$};
+\node [font=\small] at (6,17.25) {$L$};
 \end{circuitikz}
+}%
 
+\label{fig:my_label}
+\end{figure}
 
 \begin{enumerate}
 
