@@ -303,44 +303,45 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \item The circuit in the figure is a current commutated dc-dc chopper where, $Th_M$ is the main SCR and $Th_{AUX}$ is the auxiliary SCR. The load current is constant at $10$ A. $Th_M$ is turned OFF between
 
 \begin{figure}[H]
-        \centering
-        \resizebox{0.3\textwidth}{!}{%
-            \begin{circuitikz}
-                \tikzstyle{every node}=[font=\small]
-                % Battery
-                \draw (1.25,16.75) to[battery1] (1.25,14.25);
-                
-                % Diodes and SCRs
-                \draw (1.25,16.75) to[D] (6.25,16.75); % Main diode
-                \draw (2.5,16.75) to[D] (2.5,15.5); % Auxiliary diode
-                \draw (2.5,15.5) to[D] (5,15.5);
-                \draw (5,16.75) to[short] (5,14.5);
-                
-                % Capacitor and Inductor
-                \draw (2.5,15.5) to[short] (2.5,14.5);
-                \draw (2.5,14.5) to[C, l=10$\mu$F] (3.25,14.5);
-                \draw (3.25,14.5) to[L, l=25.28$\mu$H] (5,14.5);
-                
-                % Load resistor
-                \draw (6,13.25) to[D] (6,16.75);
-                \draw (6,13.25) to[short] (1.25,13.25);
-                \draw (1.25,14.25) to[short] (1.25,13.25);
-                \draw (7,16.75) to[european resistor, l=L] (7,13.25);
-                \draw (6.25,16.75) to[short] (7,16.75);
-                \draw (6,13.25) to[short] (7,13.25);
-                
-                % Labels
-                \node at (0.75,15) {230 V};
-                \node at (4,17.25) {$Th_M$};
-                \node at (3.75,16) {$Th_{Aux}$};
-                \node at (7.5,15.5) {L};
-                \node at (7.5,15.25) {O};
-                \node at (7.5,15) {A};
-                \node at (7.5,14.75) {D};
-            \end{circuitikz}
-        }
-        \label{fig:chopper-circuit}
-    \end{figure}
+    \centering
+    \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+            \tikzstyle{every node}=[font=\small]
+            
+            % Battery
+            \draw (1.25,16.75) to[battery1] (1.25,14.25);
+            
+            % Diodes and SCRs
+            \draw (1.25,16.75) to[D] (6.25,16.75); % Main diode
+            \draw (2.5,16.75) to[D] (2.5,15.5); % Auxiliary diode
+            \draw (2.5,15.5) to[D] (5,15.5);
+            \draw (5,16.75) to[short] (5,14.5);
+            
+            % Capacitor and Inductor
+            \draw (2.5,15.5) to[short] (2.5,14.5);
+            \draw (2.5,14.5) to[C, l=10$\mu$F] (3.25,14.5);
+            \draw (3.25,14.5) to[L, l=25.28$\mu$H] (5,14.5);
+            
+            % Load resistor
+            \draw (6,13.25) to[D] (6,16.75); % Lower diode
+            \draw (6,13.25) to[short] (1.25,13.25);
+            \draw (1.25,14.25) to[short] (1.25,13.25);
+            \draw (6.25,16.75) to[short] (7,16.75);
+            \draw (6,13.25) to[short] (7,13.25);
+            \draw (7,16.75) to[european resistor] (7,13.25); % Removed label "l=R"
+            
+            % Labels
+            \node at (0.75,15) {230 V};
+            \node at (4,17.25) {$Th_M$};
+            \node at (3.75,16) {$Th_{Aux}$};
+            \node at (7.5,15.5) {L};
+            \node at (7.5,15.25) {O};
+            \node at (7.5,15) {A};
+            \node at (7.5,14.75) {D};
+        \end{circuitikz}
+    }
+    \label{fig:chopper-circuit}
+\end{figure}
 
     \begin{enumerate}
         \item $0 \mu s<t\leq 25 \mu s$

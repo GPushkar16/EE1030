@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  26 OCT 2024 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  26 OCT 2024 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,13 +1441,13 @@ f-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5]
 ! Extra }, or forgotten \endgroup.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.601 \end{figure}
+l.602 \end{figure}
                   
 ? 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.601 \end{figure}
+l.602 \end{figure}
                   
 ? 
 
@@ -1457,13 +1457,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.601 \end{figure}
+l.602 \end{figure}
                   
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.601 \end{figure}
+l.602 \end{figure}
                   
 ? 
 
@@ -1473,7 +1473,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.610 \item A
+l.611 \item A
               three-phase squirrel cage induction motor has a starting torqu...
 
 ? 
@@ -1484,7 +1484,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.620 \item T
+l.621 \item T
              he matrix A given below is the node incidence matrix of a netwo...
 
 ? 
@@ -1495,7 +1495,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.640 \item A
+l.641 \item A
              n isolated $50$ Hz synchronous generator is rated at $15 MW$, w...
 
 ? 
@@ -1503,109 +1503,109 @@ l.640 \item A
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 
@@ -1615,13 +1615,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.648 \end{enumerate}
+l.649 \end{enumerate}
                      
 ? 
 [7] (./main.aux)
@@ -1637,10 +1637,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 48560 strings out of 474222
- 1145270 string characters out of 5748734
- 1963975 words of memory out of 5000000
- 70001 multiletter control sequences out of 15000+600000
+ 48551 strings out of 474222
+ 1144984 string characters out of 5748734
+ 1962975 words of memory out of 5000000
+ 69992 multiletter control sequences out of 15000+600000
  634972 words of font info for 196 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  117i,11n,121p,1172b,1385s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1651,7 +1651,7 @@ onts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 81852 bytes).
+Output written on main.pdf (7 pages, 81805 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams
