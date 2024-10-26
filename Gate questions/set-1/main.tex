@@ -301,41 +301,54 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \end{enumerate}
 
 \item The circuit in the figure is a current commutated dc-dc chopper where, $Th_M$ is the main SCR and $Th_{AUX}$ is the auxiliary SCR. The load current is constant at $10$ A. $Th_M$ is turned OFF between
-\begin{figure}[!ht]
-\centering
-\resizebox{0.4\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\small]
-\draw (1,16) to[battery1] (1,13.5);
-\draw (1,16) to[D] (7.75,16);
-\draw (2.5,16) to[D] (2.5,14.75);
-\draw (2.5,14.75) to[D] (5.5,14.75);
-\draw (2.5,14.75) to[short] (2.5,13.25);
-\draw (3.5,13.25) to[L ] (5.5,13.25);
-\draw (2.5,13.25) to[C] (3.75,13.25);
-\draw (5.5,16) to[short] (5.5,13.25);
-\draw (7,12.25) to[D] (7,16);
-\draw (1,13.5) to[short] (1,12.25);
-\draw (1,12.25) to[short] (7.75,12.25);
-\draw (7.75,16) to[short] (7.75,14.75);
-\draw (7.75,16) to[european resistor] (7.75,12.25);
-\node [font=\small] at (4.25,16.5) {$Th_M$};
-\node [font=\small] at (4.25,14.25) {$Th_{Aux}$};
-\node [font=\small] at (1.5,14.25) {$230 V$};
-\node [font=\small] at (5,12.75) {$25.28 \mu H$};
-\node [font=\small] at (3,13.75) {$10\mu F$};
-\end{circuitikz}
-}%
 
-\label{fig:my_label}
-\end{figure}
+\begin{figure}[H]
+        \centering
+        \resizebox{0.3\textwidth}{!}{%
+            \begin{circuitikz}
+                \tikzstyle{every node}=[font=\small]
+                % Battery
+                \draw (1.25,16.75) to[battery1] (1.25,14.25);
+                
+                % Diodes and SCRs
+                \draw (1.25,16.75) to[D] (6.25,16.75); % Main diode
+                \draw (2.5,16.75) to[D] (2.5,15.5); % Auxiliary diode
+                \draw (2.5,15.5) to[D] (5,15.5);
+                \draw (5,16.75) to[short] (5,14.5);
+                
+                % Capacitor and Inductor
+                \draw (2.5,15.5) to[short] (2.5,14.5);
+                \draw (2.5,14.5) to[C, l=10$\mu$F] (3.25,14.5);
+                \draw (3.25,14.5) to[L, l=25.28$\mu$H] (5,14.5);
+                
+                % Load resistor
+                \draw (6,13.25) to[D] (6,16.75);
+                \draw (6,13.25) to[short] (1.25,13.25);
+                \draw (1.25,14.25) to[short] (1.25,13.25);
+                \draw (7,16.75) to[european resistor, l=L] (7,13.25);
+                \draw (6.25,16.75) to[short] (7,16.75);
+                \draw (6,13.25) to[short] (7,13.25);
+                
+                % Labels
+                \node at (0.75,15) {230 V};
+                \node at (4,17.25) {$Th_M$};
+                \node at (3.75,16) {$Th_{Aux}$};
+                \node at (7.5,15.5) {L};
+                \node at (7.5,15.25) {O};
+                \node at (7.5,15) {A};
+                \node at (7.5,14.75) {D};
+            \end{circuitikz}
+        }
+        \label{fig:chopper-circuit}
+    \end{figure}
 
-\begin{enumerate}
-\item $0 \mu s<t\leq 25 \mu s$
-\item $25 \mu s<t\leq 50 \mu s$
-\item $50 \mu s<t\leq 75 \mu s$
-\item $75 \mu s<t\leq100\mu s$
-\end{enumerate}
+    \begin{enumerate}
+        \item $0 \mu s<t\leq 25 \mu s$
+        \item $25 \mu s<t\leq 50 \mu s$
+        \item $50 \mu s<t\leq 75 \mu s$
+        \item $75 \mu s<t\leq 100 \mu s$
+    \end{enumerate}
+
 
 \item In the circuit shown in figure switch $SW_1$ is initially CLOSED and $SW_2$ is OPEN. The inductor L carries a current of 10 A and the capacitor is charged to 10 V with polarities as indicated. $SW_2$ is initially CLOSED at $t=0-$ and $SW_1$ is OPENED at $t=0$. The current through C and the voltage across L at $t=0+$ is
 \begin{figure}[!ht]
