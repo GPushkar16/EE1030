@@ -149,28 +149,26 @@
 \tikzstyle{every node}=[font=\LARGE]
 \draw (1.25,16) to[battery1] (1.25,14.5);
 \draw (1.25,16) to[opening switch] (3.25,16);
-\node [font=\LARGE] at (0.25,15.25) {25 V};
+\node [font=\small] at (0.25,15.25) {25 V};
 \draw (3.25,16) to[R] (3.75,16);
 \draw (4,16) to[L ] (4,14.5);
 \draw (1.25,14.5) to[short] (4,14.5);
 \draw [short] (4.5,16.25) -- (4.5,14.5);
 \draw [short] (4.75,16.25) -- (4.75,14.5);
-\node [font=\LARGE] at (2,16.75) {SW};
-\node [font=\LARGE] at (2,16.75) {};
-\node [font=\LARGE] at (4.5,16.75) {T1};
+\node [font=\small] at (2,16.75) {SW};
+\node [font=\small] at (4.5,16.75) {$T_1$};
 \draw (5.25,16.25) to[L ] (5.25,15.75);
 \draw (5.25,16.5) to[R] (6.5,16.5);
 \draw (6.5,16.5) to[short] (6.5,15.5);
 \draw (5.25,15.5) to[short] (6.5,15.5);
-\node [font=\LARGE] at (6.5,16.75) {R};
+\node [font=\small] at (6.5,16.75) {R};
 \draw [->, >=Stealth] (5.25,17.25) -- (6.75,17.25);
-\node [font=\LARGE] at (6,17.25) {};
-\node [font=\LARGE] at (6,17.75) {IR};
+\node [font=\small] at (6,17.75) {IR};
 \draw (5.25,15) to[L ] (5.25,14.5);
 \draw (5.25,15.25) to[C] (6.5,15.25);
 \draw (6.5,15.25) to[short] (6.5,14.25);
 \draw (5.25,14.25) to[short] (6.5,14.25);
-\node [font=\LARGE] at (6.5,15.25) {C};
+\node [font=\small] at (6.5,15.25) {C};
 \end{circuitikz}
 }%
 
@@ -194,7 +192,7 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \draw [short] (4.25,16.5) -- (6.5,16.5);
 \draw [short] (6.5,16.5) -- (6.5,14);
 \draw [short] (4.25,14) -- (6.5,14);
-\node [font=\large] at (5.5,15.25) {IC 555};
+\node [font=\small] at (5.5,15.25) {IC 555};
 \draw [short] (5.25,17.25) -- (5.25,16.5);
 \draw [short] (3.5,17.25) -- (5.25,17.25);
 \draw [->, >=Stealth] (3.25,16.5) -- (3.25,18);
@@ -320,9 +318,9 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \draw (1,13.5) to[short] (1,12.25);
 \draw (1,12.25) to[short] (7.75,12.25);
 \draw (7.75,16) to[short] (7.75,14.75);
-\draw (7.75,14.75) to[european resistor] (7.75,12.5);
+\draw (7.75,16) to[european resistor] (7.75,12.25);
 \node [font=\small] at (4.25,16.5) {$Th_M$};
-\node [font=\small] at (4.25,14.5) {$Th_{Aux}$};
+\node [font=\small] at (4.25,14.25) {$Th_{Aux}$};
 \node [font=\small] at (1.5,14.25) {$230 V$};
 \node [font=\small] at (5,12.75) {$25.28 \mu H$};
 \node [font=\small] at (3,13.75) {$10\mu F$};
@@ -355,16 +353,14 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \draw (2,14) to[short] (4.75,14);
 \draw (2.25,16) to[L ] (2.25,14);
 \draw [->, >=Stealth] (2.75,14.5) -- (2.75,15.5);
-\node [font=\normalsize] at (2.5,14.25) {};
-\node [font=\normalsize] at (2.5,14.25) {L};
-\node [font=\normalsize] at (3.25,15) {10
-emps};
-\node [font=\normalsize] at (0.75,15.5) {R1 10 ohm};
-\node [font=\normalsize] at (1.75,14.5) {SW1};
-\node [font=\normalsize] at (2.5,16.25) {SW2};
-\node [font=\normalsize] at (4,16.75) {R2 10 ohm};
-\node [font=\normalsize] at (4.25,14.75) {C};
-\node [font=\normalsize] at (5.5,14.75) {10 V};
+\node [font=\small] at (2.5,14.25) {L};
+\node [font=\small] at (3.25,15) {10 emps};
+\node [font=\small] at (0.75,15.5) {$R_1 10 \ohm$};
+\node [font=\small] at (1.55,14.5) {$SW_1$};
+\node [font=\small] at (2.5,16.25) {$SW_2$};
+\node [font=\small] at (4,16.75) {$R_2 10 \ohm$};
+\node [font=\small] at (4.25,14.75) {C};
+\node [font=\small] at (5.5,14.75) {10 V};
 \end{circuitikz}
 }%
 
@@ -557,36 +553,37 @@ emps};
 \resizebox{0.4\textwidth}{!}{%
 \begin{circuitikz}
 \tikzstyle{every node}=[font=\small]
-\draw [short] (1,15.25) -- (1,16.25);
-\draw [short] (1,16.25) -- (1.5,16.25);
-\draw [short] (0.5,15.25) -- (1,15.25);
-\node [font=\small] at (0.5,15.5) {$0$};
-\node [font=\small] at (1.25,16.5) {$1$};
-\draw [->, >=Stealth] (1.5,16) -- (2,16);
-\draw  (2.5,16) ellipse (0.5cm and 0.5cm);
-\node [font=\small] at (2.5,16) {$\epsilon$};
-\draw [->, >=Stealth] (3,16) -- (3.75,16);
-\draw (3.25,16) to[short] (3.25,17.5);
-\draw [->, >=Stealth] (3.25,17.5) -- (4.25,17.5);
-\draw  (4.25,18) rectangle (5,17);
-\node [font=\small] at (4.5,17.5) {$\frac{k_i}{s}$};
-\draw  (3.5,16.5) rectangle (4.5,15.5);
-\node [font=\small] at (4,16.25) {$k_p$};
-\draw [->, >=Stealth] (4.5,16) -- (5.25,16);
-\draw [->, >=Stealth] (5,17) -- (5.5,16.25);
-\node [font=\small] at (5.5,15.75) {$\epsilon$};
-\draw [->, >=Stealth] (6,15.75) -- (6.5,15.75);
-\draw  (7,16) rectangle (7.25,16);
-\draw  (5.5,15.75) circle (0.5cm);
-\draw  (6.5,16.25) rectangle (8,15.25);
-\node [font=\small] at (7,15.75) {$\frac{w^2}{s^2+2\epsilon w+w^2}$};
-\draw [->, >=Stealth] (8,16.25) -- (10.25,16.25);
-\draw (9,16.25) to[short] (9,13.75);
-\draw (2.75,14) to[short] (9,14);
-\draw [->, >=Stealth] (2.75,14) -- (2.5,15.5);
+\draw (0.25,15) to[short] (0.75,15);
+\draw (0.75,15) to[short] (0.75,16);
+\draw (0.75,16) to[short] (1.25,16);
+\draw [->, >=Stealth] (1,15.5) -- (1.5,15.5);
+\draw  (1.75,15.5) circle (0.25cm);
+\draw [->, >=Stealth] (2,15.5) -- (2.5,15.5);
+\draw  (2.5,15.75) rectangle (3.25,15.25);
+\draw [short] (2,15.5) -- (2,16.75);
+\draw [->, >=Stealth] (2,16.75) -- (3.75,16.75);
+\draw  (3.75,17) rectangle (4.25,16.25);
+\draw [->, >=Stealth] (3.25,15.5) -- (3.75,15.5);
+\draw [->, >=Stealth] (4,16.25) -- (4,15.75);
+\draw  (4.25,15.25) circle (0.5cm);
+\draw [->, >=Stealth] (4.75,15.25) -- (5.25,15.25);
+\draw  (5.25,16) rectangle (7,14.75);
+\draw [->, >=Stealth] (7,15.5) -- (8.5,15.5);
+\draw [short] (7.5,15.5) -- (7.5,13.75);
+\draw [short] (7.5,13.75) -- (1.75,13.75);
+\draw [->, >=Stealth] (1.75,13.75) -- (1.75,15.25);
+\node [font=\small] at (0.5,15.25) {0};
+\node [font=\small] at (1,16.25) {1};
+\node [font=\small] at (1.75,15.5) {$\epsilon$};
+\node [font=\small] at (4.25,15.25) {$\epsilon$};
+\node [font=\small] at (3,15.5) {$k_p$};
+\node [font=\small] at (4,16.5) {$\frac{k_1}{s}$};
+\node [font=\small] at (6,15.25) {$\frac{w^2}{s^2+2\epsilon w+w^2}$};
 \end{circuitikz}
 }%
 
+\label{fig:my_label}
+\end{figure}
 \label{fig:my_label}
 \end{figure}
 
