@@ -305,29 +305,26 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \item The circuit in the figure is a current commutated dc-dc chopper where, $Th_M$ is the main SCR and $Th_{AUX}$ is the auxiliary SCR. The load current is constant at $10$ A. $Th_M$ is turned OFF between
 \begin{figure}[!ht]
 \centering
-\resizebox{0.3\textwidth}{!}{%
+\resizebox{0.4\textwidth}{!}{%
 \begin{circuitikz}
-\tikzstyle{every node}=[font=\normalsize]
-\draw (3,16) to[D] (4,16);
-\draw (3,16) to[D] (3,15);
-\draw (3,15) to[D] (4,15);
-\draw (4,16) to[short] (4,14);
-\draw (3,15) to[short] (3,14);
-\draw (3,14) to[C] (3.5,14);
-\draw (3.5,14) to[L ] (4,14);
-\draw (4,16) to[short] (4.75,16);
-\draw (3,16) to[short] (1.5,16);
-\draw (4.75,16) to[short] (5.75,16);
-\draw (5.75,16) to[short] (5.75,15);
-\draw  (5.75,15) rectangle (5.5,14);
-\draw (5.5,14) to[short] (5.5,13.25);
-\draw (1.5,13.25) to[short] (5.5,13.25);
-\draw (4.75,13.25) to[D] (4.75,16);
-\draw (1.5,16) to[battery2] (1.5,13.25);
-\node [font=\small] at (1,14.75) {230 V};
-\node [font=\normalsize] at (3.5,16.25) {ThM};
-\node [font=\normalsize] at (3,13.75) {10 mF};
-\node [font=\normalsize] at (3.75,14.5) {25.28 mH};
+\tikzstyle{every node}=[font=\small]
+\draw (1,16) to[battery1] (1,13.5);
+\draw (1,16) to[D] (7.75,16);
+\draw (2.5,16) to[D] (2.5,14.75);
+\draw (2.5,14.75) to[D] (5.5,14.75);
+\draw (2.5,14.75) to[short] (2.5,13.25);
+\draw (3.5,13.25) to[L ] (5.5,13.25);
+\draw (2.5,13.25) to[C] (3.75,13.25);
+\draw (5.5,16) to[short] (5.5,13.25);
+\draw (7,12.25) to[D] (7,16);
+\draw (1,13.5) to[short] (1,12.25);
+\draw (1,12.25) to[short] (7.75,12.25);
+\draw (7.75,16) to[short] (7.75,14.75);
+\draw (7.75,14.75) to[european resistor] (7.75,12.5);
+\node [font=\small] at (4.25,16.5) {$Th_M$};
+\node [font=\small] at (1.5,14.25) {$230 V$};
+\node [font=\small] at (5,12.75) {$25.28 \mu H$};
+\node [font=\small] at (3,13.75) {$10\mu F$};
 \end{circuitikz}
 }%
 
