@@ -142,33 +142,34 @@
         \item $i, -i, 0$
     \end{enumerate}
 \item In the figure, transformer $T_1$ has two secondaries all three windings having the same number of turns and with polarities as indicated. One secondary is shorted by a $10 \ohm$ resistor R, and the other by a $15 \mu F$ capacitor. The switch SW is opened $\brak{t=0}$ when the capacitor is charged to $5V$ with the left plate as positive. At $t=0+$ the voltage $V_p$ and current $I_R$ are
+
 \begin{figure}[!ht]
 \centering
-\resizebox{0.5\textwidth}{!}{%
+\resizebox{0.4\textwidth}{!}{%
 \begin{circuitikz}
-\tikzstyle{every node}=[font=\LARGE]
-\draw (1.25,16) to[battery1] (1.25,14.5);
-\draw (1.25,16) to[opening switch] (3.25,16);
-\node [font=\small] at (0.25,15.25) {25 V};
-\draw (3.25,16) to[R] (3.75,16);
-\draw (4,16) to[L ] (4,14.5);
-\draw (1.25,14.5) to[short] (4,14.5);
-\draw [short] (4.5,16.25) -- (4.5,14.5);
-\draw [short] (4.75,16.25) -- (4.75,14.5);
-\node [font=\small] at (2,16.75) {SW};
-\node [font=\small] at (4.5,16.75) {$T_1$};
-\draw (5.25,16.25) to[L ] (5.25,15.75);
-\draw (5.25,16.5) to[R] (6.5,16.5);
-\draw (6.5,16.5) to[short] (6.5,15.5);
-\draw (5.25,15.5) to[short] (6.5,15.5);
-\node [font=\small] at (6.5,16.75) {R};
-\draw [->, >=Stealth] (5.25,17.25) -- (6.75,17.25);
-\node [font=\small] at (6,17.75) {IR};
-\draw (5.25,15) to[L ] (5.25,14.5);
-\draw (5.25,15.25) to[C] (6.5,15.25);
-\draw (6.5,15.25) to[short] (6.5,14.25);
-\draw (5.25,14.25) to[short] (6.5,14.25);
-\node [font=\small] at (6.5,15.25) {C};
+\tikzstyle{every node}=[font=\small]
+\draw (1,15.75) to[opening switch] (2.5,15.75);
+\draw (2.5,15.75) to[R] (3.5,15.75);
+\draw (3.5,15.75) to[L ] (3.5,13.75);
+\draw (3.5,13.75) to[short] (1,13.75);
+\draw (1,15.75) to[battery1] (1,13.75);
+\draw [short] (4.25,16.25) -- (4.25,13);
+\draw [short] (4.5,16.25) -- (4.5,13);
+\draw (5.25,16) to[L ] (5.25,15);
+\draw (5.25,16) to[R] (7,16);
+\draw (7,16) to[short] (7,15);
+\draw (5.25,15) to[short] (7,15);
+\draw (5.25,14.25) to[C] (7,14.25);
+\draw (5.25,14.25) to[L ] (5.25,13.25);
+\draw (5.25,13.25) to[short] (7,13.25);
+\draw (7,14.25) to[short] (7,13.25);
+\node [font=\small] at (0.5,15) {$25V$};
+\node [font=\small] at (1.75,16.25) {SW};
+\node [font=\small] at (4.5,16.5) {$T_1$};
+\draw [->, >=Stealth] (5.5,16.75) -- (7,16.75);
+\node [font=\small] at (5.75,17) {$IR$};
+\node [font=\small] at (6.5,16.25) {$R$};
+\node [font=\small] at (6.5,14.5) {$C$};
 \end{circuitikz}
 }%
 
@@ -184,33 +185,31 @@
 
 \item IC $555$ in the adjacent figure is configured as an astable
 multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to pin 4. The pin description is: 1 and 8-supply; 2-trigger; 4-reset; 6-threshold; 7-discharge. The waveform appearing across the capacitor starting from $t=0$, as observed on a storage CRO is:
+
 \begin{figure}[!ht]
-\resizebox{0.4\textwidth}{!}{%
+\centering
+\resizebox{0.3\textwidth}{!}{%
 \begin{circuitikz}
-\tikzstyle{every node}=[font=\large]
-\draw [short] (4.25,16.5) -- (4.25,14);
-\draw [short] (4.25,16.5) -- (6.5,16.5);
-\draw [short] (6.5,16.5) -- (6.5,14);
-\draw [short] (4.25,14) -- (6.5,14);
-\node [font=\small] at (5.5,15.25) {IC 555};
-\draw [short] (5.25,17.25) -- (5.25,16.5);
-\draw [short] (3.5,17.25) -- (5.25,17.25);
-\draw [->, >=Stealth] (3.25,16.5) -- (3.25,18);
-\draw [short] (3.25,17.25) -- (3.5,17.25);
-\draw  (3,16.5) rectangle (3.5,15.75);
-\draw [short] (3.25,15.75) -- (3.25,14.5);
-\draw [short] (2.75,15.25) -- (4.25,15.25);
-\draw  (3,14.5) rectangle (3.25,13.5);
-\draw [short] (2.75,15.25) -- (2.5,15.25);
-\draw [short] (2.5,15.25) -- (2.5,14.75);
-\draw (2.5,14.75) to[D] (2.5,13.75);
-\draw [short] (2.5,13.75) -- (4.25,14.25);
-\draw [short] (4.75,14) -- (4.75,12.75);
-\draw [short] (4.75,12.75) -- (2.75,12.75);
-\draw (3,13.5) to[C] (3,13);
-\draw (3,13) to (3,12.75) node[ground]{};
-\node [font=\normalsize] at (2.5,16.25) {10 K};
-\node [font=\normalsize] at (4,13.5) {10 K};
+\tikzstyle{every node}=[font=\small]
+\draw [->, >=Stealth] (1.25,16) -- (1.25,17.25);
+\draw (1.25,16.5) to[short] (3.75,16.5);
+\draw (3.75,16.5) to[short] (3.75,16);
+\draw [short] (3.75,16) -- (3.75,15.75);
+\draw (1.25,16) to[european resistor] (1.25,15);
+\draw (1.25,15) to[european resistor] (1.25,12.75);
+\draw  (2.75,15.75) rectangle (4.75,12);
+\draw (2.75,14.75) to[short] (0.5,14.75);
+\draw (0.5,14.75) to[D] (0.5,12.75);
+\draw (0.5,12.75) to[short] (2.75,12.75);
+\draw (1.25,12.75) to[short] (1.25,12.25);
+\draw (1.25,12.25) to[C] (1.25,11.5);
+\draw (1.25,11.5) to (1.25,11.25) node[ground]{};
+\draw (3.5,12) to[short] (3.5,10);
+\draw (3.5,10) to[short] (1,10);
+\draw (1,10) to[short] (0.5,10);
+\node [font=\small] at (4,13.75) {IC 555};
+\node [font=\small] at (2.10,13.75) {10 K};
+\node [font=\small] at (2.10,15.5) {10 K};
 \end{circuitikz}
 }%
 
@@ -218,6 +217,7 @@ multivibrator. it is enabled to oscillate at $t=0$ by applying a high input to p
 \end{figure}
 
 \begin{enumerate}
+
 \item 
 \begin{tikzpicture}
     % Grid
