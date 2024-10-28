@@ -142,40 +142,38 @@
         \item $i, -i, 0$
     \end{enumerate}
 \item In the figure, transformer $T_1$ has two secondaries all three windings having the same number of turns and with polarities as indicated. One secondary is shorted by a $10 \ohm$ resistor R, and the other by a $15 \mu F$ capacitor. The switch SW is opened $\brak{t=0}$ when the capacitor is charged to $5V$ with the left plate as positive. At $t=0+$ the voltage $V_p$ and current $I_R$ are
-
 \begin{figure}[!ht]
 \centering
 \resizebox{0.4\textwidth}{!}{%
 \begin{circuitikz}
 \tikzstyle{every node}=[font=\small]
-\draw (1,15.75) to[opening switch] (2.5,15.75);
-\draw (2.5,15.75) to[R] (3.5,15.75);
-\draw (3.5,15.75) to[L ] (3.5,13.75);
-\draw (3.5,13.75) to[short] (1,13.75);
-\draw (1,15.75) to[battery1] (1,13.75);
-\draw [short] (4.25,16.25) -- (4.25,13);
-\draw [short] (4.5,16.25) -- (4.5,13);
-\draw (5.25,16) to[L ] (5.25,15);
-\draw (5.25,16) to[R] (7,16);
-\draw (7,16) to[short] (7,15);
-\draw (5.25,15) to[short] (7,15);
-\draw (5.25,14.25) to[C] (7,14.25);
-\draw (5.25,14.25) to[L ] (5.25,13.25);
-\draw (5.25,13.25) to[short] (7,13.25);
-\draw (7,14.25) to[short] (7,13.25);
-\node [font=\small] at (0.5,15) {$25V$};
-\node [font=\small] at (1.75,16.25) {SW};
-\node [font=\small] at (4.5,16.5) {$T_1$};
-\draw [->, >=Stealth] (5.5,16.75) -- (7,16.75);
-\node [font=\small] at (5.75,17) {$IR$};
-\node [font=\small] at (6.5,16.25) {$R$};
-\node [font=\small] at (6.5,14.5) {$C$};
+\draw (1,16.25) to[opening switch] (2,16.25);
+\draw (2,16.25) to[R] (3.5,16.25);
+\draw (3.5,16.25) to[L ] (3.5,14.75);
+\draw (3.5,14.75) to[short] (1,14.75);
+\draw (1,16.25) to[battery1] (1,14.75);
+\draw [short] (4.25,17) -- (4.25,13.5);
+\draw [short] (4.75,17) -- (4.75,13.5);
+\draw (5.5,16.75) to[L ] (5.5,15.5);
+\draw (5.5,16.75) to[R] (7,16.75);
+\draw (7,16.75) to[short] (7,15.5);
+\draw (5.5,15.5) to[short] (7,15.5);
+\draw (5.5,14.75) to[L ] (5.5,13.5);
+\draw (5.5,14.75) to[C] (7,14.75);
+\draw (7,14.75) to[short] (7,13.5);
+\draw (5.5,13.5) to[short] (7,13.5);
+\node [font=\small] at (1.75,15.75) {$25V$};
+\node [font=\small] at (1.75,16.75) {SW};
+\node [font=\small] at (4.5,17.25) {$T_1$};
+\node [font=\small] at (6.5,18) {$IR$};
+\node [font=\small] at (6.25,17.25) {$R$};
+\node [font=\small] at (6.75,15) {$C$};
+\draw [->, >=Stealth] (5.5,17.75) -- (7.25,17.75);
 \end{circuitikz}
 }%
 
 \label{fig:my_label}
 \end{figure}
-
 \begin{enumerate}
 \item $-25 V, 0.0 A$
 \item very large voltage, very large current
