@@ -1,0 +1,241 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{EE-2007 52-68}}
+\author{AI24BTECH11012- Pushkar Gudla}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}
+
+\begin{enumerate}
+    \item A cantilever with thin-walled channel cross section is subjected to a lateral force at its shear center. The cantilever undergoes.
+    \begin{enumerate}
+    \item bending without twisting
+    \item bending and twisting
+    \item neither bending nor twisting
+    \item twisting without bending
+    \end{enumerate}
+  \item The two non-zero principal stresses at a point in a thin plate are $\sigma_1=25$ MPa and $\sigma_2=-25$ MPa. The maximum shear stress(in MPa) at this point is \rule{2.5cm}{0.4pt}.
+  \item Consider the density and altitude at the base of an isothermal layer in the standard atmosphere to be $\rho_1$ and $h_1$, respectively. The density variation($\rho$ versus $h$) in that layer is governed by ($R:$specific gas constant, $T:$temperature, $g_o$acceleration due to gravity at sea level)
+    \begin{enumerate}
+    \item $\frac{\rho}{\rho_1}=e^{\frac{g_o}{RT}\brak{h-h_1}}$
+    \item $\frac{\rho}{\rho_1}=e^{\frac{g_o}{RT}\brak{h_1-h}}$
+    \item $\frac{\rho}{\rho_1}=e^{\frac{RT}{g_o}\brak{h-h_1}}$
+    \item $\frac{\rho}{\rho_1}=e^{\frac{RT}{g_o}\brak{h_1-h}}$
+    \end{enumerate}
+  \item For constant free stream velocity and density, a change in lift for a large aspect ratio straight wing with thin cambered section at small angles of attack, leads to:
+  \begin{enumerate}
+  \item a shift of the aerodynamic center and no shift of the center of pressure
+  \item a shift of the center of pressure and no shift of the aerodynamic center
+  \item shift of both the aerodynamic center and center of pressure
+  \item no shift either of the aerodynamic center or of the center of pressure
+  \end{enumerate}
+ \item Which of the following modes of a stable aircraft has non-oscillatory response characteristics?
+   \begin{enumerate}
+  \item Short period
+  \item Phugoid
+  \item Dutch roll
+  \item Spiral
+  \end{enumerate}
+ \item As a candidate for vertical tail which one of the following airfoil sections is appropriate?
+   \begin{enumerate}
+  \item NACA 0012
+  \item NACA 2312
+  \item NACA 23012
+  \item Clarke Y profile
+  \end{enumerate}
+ \item The primary purpose of a trailing edge flap is to
+   \begin{enumerate}
+  \item avoid flow seperation
+  \item increase $C_{l,max}$
+  \item reduce wave drag
+  \item reduce induced drag
+  \end{enumerate}
+ \item Which one of the following aero engines has the highest propulsive efficiency?
+   \begin{enumerate}
+  \item Turbojet engine without afterburner
+  \item Turbojet engine with afterburner 
+  \item Turbofan engine
+  \item Ramjet engine
+  \end{enumerate}
+ \item The stoichiometric fuel-to-air ratio in an aircraft engine combustor varies with the compressor pressure ratio as follows:
+   \begin{enumerate}
+  \item increases linearly
+  \item decreases linearly 
+  \item is independent
+  \item increases nonlinearly
+  \end{enumerate}
+ \item A rocket engine produces a total impulse of $112 kN.s$ in a burn time period of 3.5 minutes with a propellant mass flow rate of $0.25 kg/s$. The effective exhaust velocity (in $m/s$) of gas ejecting from the engine is \rule{2.5cm}{0.4pt}.
+\item The function $y=x^3-x$ has
+\begin{enumerate}
+\item no inflection point
+\item one inflection point
+\item two inflection points
+\item three inflection points
+\end{enumerate}
+\item A $0.5 kg$ mass is suspended vertically from a point fixed on the Earth by a spring having a stiffness of $5 N/mm$. The static displacement(in $mm$) of the mass is \rule{2.5cm}{0.4pt}.
+
+\item A slender structure is subjected to four different loading (I, II, III and IV) as shown below(Figures not to scale). Which pair pf cases results in identical stress distribution at sections S-S located far away from both ends?
+
+[I]
+\begin{figure}[!ht]
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (1.75,15.75) rectangle (6.5,14);
+\draw [short] (1.75,15.75) -- (1.25,15.25);
+\draw [short] (1.75,15.25) -- (1.25,14.75);
+\draw [short] (1.75,14.5) -- (1.25,14);
+\draw [dashed] (3.25,16.25) -- (3.25,13.5);
+\node [font=\small] at (3,13.75) {S};
+\node [font=\small] at (3,16) {S};
+\draw [->, >=Stealth] (6.5,15) -- (7.75,15);
+\node [font=\small] at (7.75,14.75) {P};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+[II]
+\begin{figure}[!ht]
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (1.75,15.75) rectangle (6.5,14);
+\draw [short] (1.75,15.75) -- (1.25,15.25);
+\draw [short] (1.75,15.25) -- (1.25,14.75);
+\draw [short] (1.75,14.5) -- (1.25,14);
+\draw [dashed] (3.25,16.25) -- (3.25,13.5);
+\node [font=\small] at (3,13.75) {S};
+\node [font=\small] at (3,16) {S};
+\draw [->, >=Stealth] (6.5,15.75) -- (7.75,15.75);
+\draw [->, >=Stealth] (6.5,14) -- (7.75,14);
+\draw [->, >=Stealth] (6.5,15.25) -- (7.25,15.25);
+\draw [->, >=Stealth] (6.5,14.75) -- (7.25,14.75);
+\node [font=\small] at (8,15.25) {$\frac{P}{8}$};
+\node [font=\small] at (8,14.75) {$\frac{P}{8}$};
+\node [font=\small] at (8.2,16) {$\frac{3P}{8}$};
+\node [font=\small] at (8.2,13.75) {$\frac{3P}{8}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+[III]
+\begin{figure}[!ht]
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (1.75,15.75) rectangle (6.5,14);
+\draw [short] (1.75,15.75) -- (1.25,15.25);
+\draw [short] (1.75,15.25) -- (1.25,14.75);
+\draw [short] (1.75,14.5) -- (1.25,14);
+\draw [dashed] (3.25,16.25) -- (3.25,13.5);
+\node [font=\small] at (3,13.75) {S};
+\node [font=\small] at (3,16) {S};
+\draw [->, >=Stealth] (6.5,15.75) -- (7.75,15.75);
+\draw [->, >=Stealth] (6.5,15.25) -- (7.25,15.25);
+\node [font=\small] at (8,15.25) {$\frac{P}{8}$};
+\node [font=\small] at (8,14.75) {$\frac{P}{8}$};
+\node [font=\small] at (8.20,16) {$\frac{3P}{8}$};
+\node [font=\small] at (8.20,14) {$\frac{3P}{8}$};
+\draw [->, >=Stealth] (7,14.75) -- (6.5,14.75);
+\draw [->, >=Stealth] (7.75,14.25) -- (6.5,14.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+[IV]
+\begin{figure}[!ht]
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (1.75,15.75) rectangle (6.5,14);
+\draw [short] (1.75,15.75) -- (1.25,15.25);
+\draw [short] (1.75,15.25) -- (1.25,14.75);
+\draw [short] (1.75,14.5) -- (1.25,14);
+\draw [dashed] (3.25,16.25) -- (3.25,13.5);
+\node [font=\small] at (3,13.75) {S};
+\node [font=\small] at (3,16) {S};
+\draw [->, >=Stealth] (6.5,14.25) .. controls (7.25,14.25) and (7.25,14.25) .. (7.75,14.25) ;
+\draw [->, >=Stealth] (6.5,14.75) -- (7.25,14.75);
+\node [font=\small] at (8,15.25) {$\frac{P}{8}$};
+\node [font=\small] at (8,14.75) {$\frac{P}{8}$};
+\node [font=\small] at (8.20,16) {$\frac{3P}{8}$};
+\node [font=\small] at (8.20,14) {$\frac{3P}{8}$};
+\draw [->, >=Stealth] (7,15.25) -- (6.5,15.25);
+\draw [->, >=Stealth] (7.75,15.75) -- (6.5,15.75);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{enumerate}
+\item I and II
+\item II and III
+\item III and IV
+\item IV and I
+\end{enumerate}
+\end{enumerate} 
+
+\end{document}
+
