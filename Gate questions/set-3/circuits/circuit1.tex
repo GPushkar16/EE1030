@@ -1,0 +1,31 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (1.75,16.25) to[short] (2,16.25);
+\draw (1.75,15.75) to[short] (2,15.75);
+\draw (2,16.25) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (3.75,16);
+\draw (1.75,14) to[short] (2,14);
+\draw (1.75,13.5) to[short] (2,13.5);
+\draw (2,14) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (3.75,13.75);
+\draw (3.75,16) to[short] (4.25,16);
+\draw (3.75,13.75) to[short] (4.25,13.75);
+\draw (4.25,16) to[short] (4.25,15.25);
+\draw (4.25,15.25) to[short] (4.75,15.25);
+\draw (4.25,14.75) to[short] (4.25,13.75);
+\draw (4.25,14.75) to[short] (4.75,14.75);
+\draw (4.5,15.25) to[short] (4.75,15.25);
+\draw (4.5,14.75) to[short] (4.75,14.75);
+\draw (4.75,15.25) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (6.5,15);
+\draw (6.5,15) to[short] (7,15);
+\node [font=\small] at (1.5,16.25) {A};
+\node [font=\small] at (1.5,15.75) {B};
+\node [font=\small] at (1.5,14) {C};
+\node [font=\small] at (1.5,13.5) {D};
+\node [font=\small] at (7.25,15) {Y};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

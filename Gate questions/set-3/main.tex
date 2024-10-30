@@ -1,0 +1,134 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{AE-2015 14-26}}
+\author{AI24BTECH11012- Pushkar Gudla}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}
+
+\begin{enumerate}
+    \item In the logic circuit shown in the figure, Y is given by
+    \input{circuits/circuit1.tex}
+    \begin{enumerate}
+    \item Y=ABCD
+    \item Y=(A+B)(C+D)
+    \item Y=A+B+C+D
+    \item Y=AB+CD
+    \end{enumerate}
+    
+    \item The op-amp shown in the figure is ideal. The input impedance $\frac{v_{in}}{i_{in}}$ is given by
+    \input{circuits/circuit2.tex}
+    \begin{enumerate}
+    \item Z$\frac{R_1}{R_2}$
+    \item -Z$\frac{R_2}{R_1}$
+    \item Z
+    \item -Z$\frac{R_1}{R_1+R_2}$
+    \end{enumerate}
+    
+    \item A continuous-time input signal $x{t}$ is an eigenfunction of an LTI system, if the output is
+    \begin{enumerate}
+    \item $kx{t}$, where $k$ is an eigenvalue
+    \item $ke^{iwt}x(t)$ where $k$ is an eigenvalue and $e^{iwt}$ is a complex exponential signal
+    \item $x(t)e^{iwt}$, where $e^{iwt}$ is a complex signal
+    \item $kH(w)$, where $k$ is an eigenvalue and $H(w)$ is a frequency response of the system
+    \end{enumerate}
+    
+    \item Consider a non-singular $2x2$ square matrix $\vec{A}$. If $trace(\vec{A})=4$ and $trace{\vec{A}^2}=5$, the determinant of the matrix $\vec{A}$ is \rule{2.5cm}{0.4pt}\brak{up to 1 decimal place}.
+    
+    \item Let $f$ be a real-valued function of a real variable defined as $f(x)=x-[x]$, where $[x]$ denoted the largest integer less than or equal to $x$. The value of $\int_{0.25}^{1.25} f(x)dx$ is \rule{2cm}{0.4pt}\brak{up to 2 decimal places}.
+    
+    \item In the two-port network shown, the $h_{11}$ parameter \brak{where, $h_{11}=\frac{V_1}{I_1}$, when $V_2=0$} in ohms is \rule{2.5cm}{0.4pt}\brak{up to 2 decimal places}.
+    \input{circuits/circuit3.tex}
+    
+    \item The series impedance matrix of a short three-phase transmission line in phase coordinates
+$
+\begin{bmatrix}
+Z_s & Z_m & Z_m \\
+Z_m & Z_s & Z_m \\
+Z_m & Z_m & Z_s 
+\end{bmatrix}
+$
+is given. If the positive sequence impedance is $ (1 + j10) \Omega $, and the zero sequence impedance is $ (4 + j31) \Omega$, then the imaginary part of $ Z_m $ (in $ \Omega $) is\rule{2.5cm}{0.4pt} \brak{up to 2 decimal places}.
+
+\item The positive, negative and zero sequence impedances of a 125 MVA, three-phase, 15.5 kV, star-grounded, 50 Hz generator are $ j0.1 $ pu, $ j0.05 $ pu, and $ j0.01 $ pu respectively on the machine rating base. The machine is unloaded and working at the rated terminal voltage. If the grounding impedance of the generator is $ j0.01 $ pu, then the magnitude of fault current for a $ b $-phase to ground fault (in kA) is \rule{2cm}{0.4pt} (up to 2 decimal places).
+
+\item A $ 1000 \times 1000$ bus admittance matrix for an electric power system has 8000 non-zero elements. The minimum number of branches (transmission lines and transformers) in this system are \rule{2cm}{0.4pt}(up to 2 decimal places).
+
+\item The waveform of the current drawn by a semi-converter from a sinusoidal AC voltage source is shown in the figure. If $I_o=20$A, the rms value of fundamental component of the current is \rule{2cm}{0.4pt}A\brak{up to 2 decimal places}.
+\input{circuits/circuit4.tex}
+
+\item A separately excited dc motor has an armature resistance $R_a=0.05\ohm$. The field excitation is kept constant. At an armature voltage of 100V, the motor produces a torque of 500 Nm at zero speed. Neglecting all mechanical losses, the no-load speed of the motor(in radian/s) for an armature voltage of 150 V is \rule{2cm}{0.4pt}\brak{up to 2 decimal places}.
+
+\item Consider a unity feedback system with forward transfer function given by 
+\[
+G(s)=\frac{1}{\brak{s+1}\brak{s+2}}
+\]
+The steady-state error in the output of the system for a unit-step input is \rule{2cm}{0.4pt}\brak{up to 2 decimal places}.
+
+\item A transformer with toroidal core of permeabiltiy $\mu$ is shown in the figure. Assuming uniform flux density across the circular core cross-section of radius $r<R$, and neglecting any leakage flux, the best estimate for the mean radius $R$ is
+
+\input{circuits/circuit5.tex}
+\begin{enumerate}
+\item $\frac{\mu Vr^2N_p^2w}{I}$
+\item $\frac{\mu Ir^2N_pN_sw}{V}$
+\item $\frac{\mu Vr^2N_p^2w}{2I}$
+\item $\frac{\mu Ir^2N_p^2w}{2V}$
+\end{enumerate}
+\end{enumerate}
+\end{document}
+

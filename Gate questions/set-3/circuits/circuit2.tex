@@ -1,0 +1,31 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (4.5,14.25) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+\draw (opamp2.+) to[short] (3,14.75);
+\draw  (opamp2.-) to[short] (3,13.75);
+\draw (5.7,14.25) to[short](6,14.25);
+\draw (0.75,14.75) to[american voltage source] (0.75,12.25);
+\draw (0.75,12.25) to (0.75,12) node[ground]{};
+\draw (2.75,16.75) to[short] (2.75,14.75);
+\draw (2.75,16.75) to[european resistor] (6,16.75);
+\draw (3,12.25) to[R] (6,12.25);
+\draw (6,16.75) to[short] (6,12.25);
+\draw (3,13.75) to[short] (3,12);
+\draw (3,12.25) to[R] (3,10.5);
+\draw (3,10.5) to (3,10) node[ground]{};
+\node [font=\small] at (0,13.5) {$V_{in}$};
+\node [font=\small] at (1.5,15.25) {$i_{in}$};
+\node [font=\small] at (2.25,11.25) {$R_2$};
+\node [font=\small] at (4.5,11.75) {$R_1$};
+\node [font=\small] at (6.5,14.25) {$V_o$};
+\node [font=\small] at (4.5,16.25) {Z};
+\draw [->, >=Stealth] (0.75,14.75) -- (1.75,14.75);
+\draw (1.75,14.75) to[short] (3,14.75);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

@@ -1,0 +1,33 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (3.75,16.25) to[american controlled current source] (5.75,16.25);
+\draw (5.75,16.25) to[short] (5.75,15);
+\draw (3.75,16.25) to[short] (3.75,15);
+\draw (3.75,15) to[R] (5.75,15);
+\draw (5.75,15) to[short] (6.25,15);
+\node at (6.25,15) [circ] {};
+\draw (3.75,15) to[R] (3.75,12.75);
+\draw (0.5,12.75) to[short] (6.25,12.75);
+\node at (6.25,12.75) [circ] {};
+\node at (0.5,12.75) [circ] {};
+\draw (3.75,15) to[R] (0.5,15);
+\node at (0.5,15) [circ] {};
+\draw [->, >=Stealth] (1.75,14.5) -- (2.75,14.5);
+\node [font=\small] at (0.25,15.25) {+};
+\node [font=\small] at (6.5,15.25) {+};
+\node [font=\small] at (0.25,13) {-};
+\node [font=\small] at (6.5,13) {-};
+\node [font=\small] at (2.25,14.25) {$I_1$};
+\node [font=\small] at (0.5,14) {$V_1$};
+\node [font=\small] at (6.5,14) {$V_2$};
+\node [font=\small] at (5,14.5) {$1 \ohm$};
+\node [font=\small] at (3,13.5) {$1 \ohm$};
+\node [font=\small] at (5,17) {$2I_1$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
