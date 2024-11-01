@@ -1,0 +1,123 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{AE-2015 14-26}}
+\author{AI24BTECH11012- Pushkar Gudla}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\columnsep}{2.5em}
+
+\begin{enumerate}
+    \item A large water tank is fixed on a cart with wheels and a vane (see figure). The wheels of the cart provide negligible resistance for rolling on the fixed support. The cart is tied to the fixed support with a thin horizontal rope. There is a hole of diameter 5 cm on the side of the tank through which a jet of constant velocity of 10 m/s emerges. The jet of water is deflected by the attached vane by 60° (see figure). Assume that the jet velocity remains constant at 10 m/s after emerging from the vane. Take density of water to be 1000 kg/$m^3$. The tension in the connecting rope is \rule{1.5cm}{0.4pt} N (round off to one decimal place).
+    \input{figs/fig1.tex}
+    \item A finite wing of elliptic planform with aspect ratio 10, whose section is a symmetric airfoil, is placed in a uniform flow at 5 degrees angle of attack. The induced drag coefficient for the wing is \rule{1.5cm}{0.4pt} (round off to three decimal places).
+    
+    \item Consider a model of a boundary layer with the following velocity profile:
+\[
+\frac{u}{U} = 
+\begin{cases} 
+\left( \frac{y}{\delta} \right)^2 & y \leq \delta \\ 
+1 & y > \delta 
+\end{cases}
+\]
+The shape factor, defined as the ratio of the displacement thickness to momentum thickness, for this profile is \rule{1.5cm}{0.4pt}  (round off to 2 decimal places).
+
+\item An aircraft with a turbojet engine is flying at 270 m/s. The enthalpy of the incoming air at the intake is 260 kJ/kg and the enthalpy of the exhaust gases at the nozzle exit is 912 kJ/kg. The ratio of mass flow rates of fuel and air is equal to 0.019. The chemical energy (heating value) of fuel is 44.5 MJ/kg and the combustion process is ideal. The total loss of heat from the engine to the ambient is 25 kJ per kg of air. The velocity of the exhaust jet is \rule{1.5cm}{0.4pt} m/s (round off to two decimal places).
+
+\item Hot gases are generated at a temperature of 2100 K and a pressure of 14 MPa in a rocket chamber. The hot gases are expanded ideally to the ambient pressure of 0.1 MPa in a convergent-divergent nozzle having a throat area of 0.1 m$^2$. The molecular mass of the gas is 22 kg/kmol. The ratio of specific heats ($\gamma$) of the gas is 1.32. The value of the universal gas constant ($R_0$) is 8314 J/kmol-K. The acceleration due to gravity, $g$, is 9.8 m/s$^2$. The specific impulse of the rocket is \rule{1.5cm}{0.4pt} seconds (round off to two decimal places).
+
+\item A twin-spool turbofan engine is operated at sea level ($P_a = 1 \text{bar}\, T_a = 288 \text{K}$). The engine has separate cold and hot nozzles. During static thrust test at sea level, the overall mass flow rate of air through the engine and the cold exhaust temperature are measured to be 100 kg/s and 288 K, respectively. The parameters for the engine are:\\
+    Fan pressure ratio = 1.6\\
+    Overall pressure ratio = 20\\
+    Bypass ratio = 3.0\\
+    Turbine entry temperature = 1800 K\\
+The specific heat at constant pressure ($C_p$) is 1.005 kJ/kg-K and the ratio of specific heats ($\gamma$) is 1.4 for air.
+
+Assuming ideal fan and ideal expansion in the nozzle, the sea-level static thrust from the cold nozzle is \rule{1.5cm}{0.4pt}kN (round off to two decimal places)
+
+\item At the design conditions, the velocity triangle at the mean radius of a single stage axial compressor is such that the blade angle at the rotor exit is equal to 30°. The absolute velocities at the rotor inlet and exit are equal to 140 m/s and 240 m/s, respectively. The flow velocities relative to the rotor at inlet and exit of the rotor are equal to 240 m/s and 140 m/s, respectively.
+
+\input{figs/fig2.tex}
+
+The blade speed (\(U\)) at the mean radius of the rotor is \rule{1.5cm}{0.4pt}m/s (round off to two decimal places).
+
+\item A single stage axial turbine has a mean blade speed of 340 m/s at design condition with blade angles at inlet and exit of the rotor being $21^\degree$ and $55^\degree$, respectively. The degree of reaction at the mean radius of the rotor is equal to 0.4. The annulus area at the rotor inlet is 0.08 m$^2$ and the density of gas at the rotor inlet is 0.9 kg/m$^3$. The flow rate through the turbine at these conditions is \rule{2cm}{0.4pt} kg/s (round off to two decimal places).
+
+\item The air flow rate through the gas generator of a turboprop engine is 100 kg/s. The stagnation temperatures at inlet and exit of the combustor are 600 K and 1200 K, respectively. The burner efficiency is 90\% and the heating value of the fuel is 40 MJ/kg. The specific heats at constant pressure ($C_p$) for air and burned gases are 1000 J/kg-K and 1200 J/kg-K, respectively. The flow rate of the fuel being used is \rule{1.5cm}{0.4pt} kg/s (round off to two decimal places).
+
+(Note: Do not neglect the fuel flow rate with respect to the air flow rate)
+
+\item A rigid horizontal bar ABC, with roller support at A, is pinned to the columns BD and CE at points B and C, respectively as shown in figure. The other end of the column BD is fixed at D, whereas the column CE is pinned at E. A vertical load P is applied on the bar at a distance 'a' from point B.\\
+The two columns are made of steel with elastic modulus 200 GPa and have a cross section of 1.5 cm $\times$ 1.5 cm. The value of 'a' for which both columns buckle simultaneously, is \rule{2cm}{0.4pt}cm (round off to one decimal place).
+
+\input{figs/fig3.tex}
+
+\item A two-cell wing box is shown in figure. The cell walls are 1.5 mm thick and the shear modulus G=27 GPa. If the structure is subjected to a torque of 12 kNm, then the wall AD will experience a shear stress of magnitude \rule{2cm}{0.4pt}MPa (round off to one decimal place).
+\input{figs/fig4.tex}
+
+\item Two cantilever beams AB and DC are in contact with each other at their free ends through a roller as shown in figure. Both beams have a square cross section of 50 mm $\times$ 50 mm, and the elastic modulus $E=70 $GPa. If the beam AB is subjected to a uniformly distributed load of 20 kNm, then the compressive force experienced by the roller is \rule{2cm}{0.4pt}kN (round off to one decimal place).
+\input{figs/fig5.tex}
+\\
+\item A 3 m $\times$ 1 m signboard is supported by a vertical hollow pole that is fixed to the ground. The pole has a square cross section with outer dimension 250 mm. The yield strength of the pole material is 240 MPa. To sustain a wind pressure of 7.5 kPa, the dimension d of the pole is \rule{2cm}{0.4pt}mm (round off to nearest integer).
+
+(Neglect the effect of transverse shear and load due to wind pressure acting on the pole)
+\input{figs/fig6.tex}
+
+\end{enumerate}
+
+\end{document}
+

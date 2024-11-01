@@ -1,0 +1,23 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (1,14.5) to[short] (6,14.5);
+\draw [->, >=Stealth] (2.25,14.5) -- (7.25,16);
+\draw [->, >=Stealth] (7.25,16) -- (7.5,9.75);
+\draw [->, >=Stealth] (2.25,14.5) -- (7.5,9.75);
+\draw [->, >=Stealth] (2.75,10.75) -- (7.5,9.75);
+\draw [->, >=Stealth] (2.75,10.75) -- (7.25,16);
+\draw [short] (3.75,15) .. controls (4.25,15) and (4.25,14.75) .. (4,14.5);
+\node [font=\small] at (4.75,10) {$C_1$};
+\node [font=\small] at (3,13.5) {$C_2$};
+\node [font=\small] at (5.75,13.75) {$W_1$};
+\node [font=\small] at (5.5,16) {$W_2$};
+\node [font=\small] at (7.75,12.5) {U};
+\node [font=\small] at (5,14.75) {$30^\degree$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

@@ -1,0 +1,31 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (4,14) rectangle (12.75,8.75);
+\draw [short] (6.75,14) -- (6.75,8.75);
+\draw [dashed] (4,8.75) -- (4,7.75);
+\draw [dashed] (6.75,8.75) -- (6.75,7.75);
+\draw [dashed] (12.75,8.75) -- (12.75,7.75);
+\draw [dashed] (12.75,8.75) -- (14,8.75);
+\draw [dashed] (12.75,14) -- (14,14);
+\draw [->, >=Stealth] (8.75,14.5) .. controls (7.25,15) and (7,15.25) .. (5.5,14.5) ;
+\draw [<->, >=Stealth] (4,8.25) -- (6.75,8.25);
+\draw [<->, >=Stealth] (6.75,7.75) -- (12.75,7.75);
+\draw [<->, >=Stealth] (13.25,14) -- (13.25,8.75);
+\node [font=\small] at (6.75,14.25) {A};
+\node [font=\small] at (12.75,14.25) {B};
+\node [font=\small] at (3.75,14) {F};
+\node [font=\small] at (3.75,8.75) {E};
+\node [font=\small] at (12.5,9) {C};
+\node [font=\small] at (7,9) {D};
+\node [font=\small] at (5,8) {200 nm};
+\node [font=\small] at (9.25,8) {300 nm};
+\node [font=\small] at (13.75,10.75) {300 nm};
+\node [font=\small] at (7,15.25) {12 kN/m};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
