@@ -1,0 +1,10 @@
+\beamer@sectionintoc {2}{Problem}{3}{0}{1}
+\beamer@sectionintoc {3}{Solution}{4}{0}{2}
+\beamer@subsectionintoc {3}{1}{Setup and Variable Definitions}{4}{0}{2}
+\beamer@subsectionintoc {3}{2}{Converting to Matrix form}{5}{0}{2}
+\beamer@subsectionintoc {3}{3}{Parametric Form of the Line}{6}{0}{2}
+\beamer@subsectionintoc {3}{4}{Finding Points of Intersection}{7}{0}{2}
+\beamer@subsectionintoc {3}{5}{Finding Area through Integration}{8}{0}{2}
+\beamer@sectionintoc {4}{Codes}{9}{0}{3}
+\beamer@subsectionintoc {4}{1}{C code to verify Area}{9}{0}{3}
+\beamer@sectionintoc {5}{Figure}{11}{0}{4}
