@@ -6,5 +6,6 @@
 \beamer@subsectionintoc {3}{4}{Finding Points of Intersection}{7}{0}{2}
 \beamer@subsectionintoc {3}{5}{Finding Area through Integration}{8}{0}{2}
 \beamer@sectionintoc {4}{Codes}{9}{0}{3}
-\beamer@subsectionintoc {4}{1}{C code to verify Area}{9}{0}{3}
+\beamer@subsectionintoc {4}{1}{C code to verify the Area}{9}{0}{3}
+\beamer@subsectionintoc {4}{2}{Generating Parabola and Plotting the Figure}{10}{0}{3}
 \beamer@sectionintoc {5}{Figure}{11}{0}{4}

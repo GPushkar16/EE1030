@@ -37,13 +37,15 @@
 \headcommand {\beamer@subsectionpages {8}{8}}
 \headcommand {\sectionentry {4}{Codes}{9}{Codes}{0}}
 \headcommand {\beamer@subsectionpages {9}{8}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{9}{C code to verify Area}}
-\headcommand {\slideentry {4}{1}{1}{9/9}{C code to verify Area}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{9}{C code to verify the Area}}
+\headcommand {\slideentry {4}{1}{1}{9/9}{C code to verify the Area}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {4}{1}{2}{10/10}{C code to verify Area}{0}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{10}{Generating Parabola and Plotting the Figure}}
+\headcommand {\slideentry {4}{2}{1}{10/10}{Generating Parabola and Plotting the Figure}{0}}
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\beamer@sectionpages {9}{10}}
-\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
 \headcommand {\sectionentry {5}{Figure}{11}{Figure}{0}}
 \headcommand {\slideentry {5}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
