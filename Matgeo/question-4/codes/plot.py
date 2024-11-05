@@ -25,10 +25,10 @@ with open("parabola_points.txt", "r") as file:
         y_vals.append(y)
 
 # Plot the points
-plt.plot(x_vals, y_vals, label="x^2 = 4y")
+plt.plot(x_vals, y_vals, label="$x^2 = 4y$")
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Parabola: x^2 = 4y')
+plt.title('Parabola: $x^2 = 4y$')
 
 # use set_position
 ax = plt.gca()
