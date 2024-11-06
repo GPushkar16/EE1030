@@ -1,0 +1,4 @@
+\frametitle{C code to verify the Area}
+We can us the following code to verify that the area we found is correct:
+
+ \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/area_between_curves.c}}}

@@ -56,11 +56,12 @@
 \let\vec\mathbf
 
 \lstset{
-    basicstyle=\ttfamily,
-    frame=single,
-    breaklines=true,
-    columns=fullflexible,
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
 }
+
 \numberwithin{equation}{section}
 \title{Matgeo Presentation}
 \author{Pushkar Gudla \\ AI24BTECH11012\\IIT Hyderabad.}
@@ -141,22 +142,23 @@ On solving for $k_1$ and $k_2$ we get $k_1=4$ and $k_2=1$. Thus
 
 \section{Codes}
 \subsection{C code to verify the Area}
-\begin{frame}{C code to verify the Area}
-We can use the following C code to verify that the area we found is correct.
+\begin{frame}[fragile]
+\frametitle{C code to verify the Area}
+We can us the following code to verify that the area we found is correct:
 
-\resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/area_between_curves.c}}}
-
+ \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/area_between_curves.c}}}
 \end{frame}
 
 \subsection{Generating Parabola and Plotting the Figure}
-\begin{frame}{Generating Parabola and Plotting the Figure}
+\begin{frame}[Fragile]
+\frametitle{Generating Parabola and Plotting the Figure}
     We can use the following C code to generate points that lie on the parabola:
 
     \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/generate_parabola.c}}}
 
-
     We can then use the following Python code to generate the figure:
-\resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/plot.py}}}
+    
+    \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/plot.py}}}
 
 \end{frame}
 
