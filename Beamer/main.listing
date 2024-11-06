@@ -1,5 +1,3 @@
-\frametitle{Plotting the figure using Python}
-   \begin{mintedbox}{Python}[break at=.8\textheight]
 import sys
 sys.path.insert(0, '/home/pushkar/matgeo/codes/CoordGeo')
 import numpy as np
@@ -72,4 +70,3 @@ plt.grid(True) # minor
 plt.axis('equal')
 plt.savefig('plot')
 
-  \end{mintedbox}

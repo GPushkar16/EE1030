@@ -1,0 +1,74 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{n}{sys}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/home/pushkar/matgeo/codes/CoordGeo\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy.linalg} \PYG{k}{as} \PYG{n+nn}{LA}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.image} \PYG{k}{as} \PYG{n+nn}{mpimg}
+
+\PYG{k+kn}{from} \PYG{n+nn}{line.funcs} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{conics.funcs} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{triangle.funcs} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{import} \PYG{n+nn}{params}
+\PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{])}
+\PYG{n}{B} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{])}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+
+\PYG{c+c1}{\PYGZsh{} Initialize lists for x and y coordinates}
+\PYG{n}{x\PYGZus{}vals} \PYG{o}{=} \PYG{p}{[]}
+\PYG{n}{y\PYGZus{}vals} \PYG{o}{=} \PYG{p}{[]}
+
+\PYG{c+c1}{\PYGZsh{} Read points from the file}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}parabola\PYGZus{}points.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{file}\PYG{p}{:}
+    \PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{file}\PYG{p}{:}
+        \PYG{n}{x}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{line}\PYG{o}{.}\PYG{n}{split}\PYG{p}{())}
+        \PYG{n}{x\PYGZus{}vals}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+        \PYG{n}{y\PYGZus{}vals}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Plot the points}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x\PYGZus{}vals}\PYG{p}{,} \PYG{n}{y\PYGZus{}vals}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}x\PYGZca{}2 = 4y\PYGZdl{}\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Parabola: \PYGZdl{}x\PYGZca{}2 = 4y\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} use set\PYGZus{}position}
+\PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{gca}\PYG{p}{()}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{spines}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}top\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{set\PYGZus{}color}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}none\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{spines}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}left\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{set\PYGZus{}position}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}zero\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{spines}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}right\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{set\PYGZus{}color}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}none\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{spines}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}bottom\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{set\PYGZus{}position}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}zero\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Plotting all line}
+
+\PYG{c+c1}{\PYGZsh{} Define the range of y values}
+\PYG{n}{y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Define the equation x = 4y \PYGZhy{} 2}
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{n}{y} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} Create the plot}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}x = 4y \PYGZhy{} 2\PYGZsq{}}\PYG{p}{)}
+
+
+
+\PYG{c+c1}{\PYGZsh{}Labeling the coordinates}
+\PYG{n}{tri\PYGZus{}coords} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{((}\PYG{n}{A}\PYG{p}{,}\PYG{n}{B}\PYG{p}{))}\PYG{o}{.}\PYG{n}{T}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{tri\PYGZus{}coords}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,:],} \PYG{n}{tri\PYGZus{}coords}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,:])}
+\PYG{n}{vert\PYGZus{}labels} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A(2,1)\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}B(\PYGZhy{}1,0.25)\PYGZsq{}}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{txt} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{vert\PYGZus{}labels}\PYG{p}{):}
+       \PYG{n}{plt}\PYG{o}{.}\PYG{n}{annotate}\PYG{p}{(}\PYG{n}{txt}\PYG{p}{,}      \PYG{c+c1}{\PYGZsh{} this is the text}
+                 \PYG{p}{(}\PYG{n}{tri\PYGZus{}coords}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{i}\PYG{p}{],} \PYG{n}{tri\PYGZus{}coords}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{i}\PYG{p}{]),} \PYG{c+c1}{\PYGZsh{} this is the point to label}
+                 \PYG{n}{textcoords}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}offset points\PYGZdq{}}\PYG{p}{,}   \PYG{c+c1}{\PYGZsh{} how to position the text}
+                 \PYG{n}{xytext}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{),}     \PYG{c+c1}{\PYGZsh{} distance from text to points (x,y)}
+                 \PYG{n}{ha}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}center\PYGZsq{}}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} horizontal alignment can be left, right or center}
+
+
+\PYG{c+c1}{\PYGZsh{}plt.fill\PYGZus{}between(x1,x2,O,color=\PYGZsq{}green\PYGZsq{}, alpha=.2)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}x\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}y\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}best\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} minor}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}equal\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}plot\PYGZsq{}}\PYG{p}{)}
+
+\end{Verbatim}

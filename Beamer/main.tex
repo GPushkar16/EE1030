@@ -10,8 +10,54 @@
 \usepackage{mathtools}
 \usepackage{listings}
 \usepackage{url}
+% \usepackage{minted}
+% \usepackage{gvv}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\scriptsize,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+
+
 \def\UrlBreaks{\do\/\do-}
-\usetheme{Boadilla}
+\usetheme{Madrid}
 \usecolortheme{lily}
 \setbeamertemplate{footline}
 {
@@ -24,7 +70,7 @@
 }
 \setbeamertemplate{navigation symbols}{}
 
-\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr 
 \providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
@@ -63,6 +109,7 @@ columns=fullflexible
 }
 
 \numberwithin{equation}{section}
+
 \title{Matgeo Presentation}
 \author{Pushkar Gudla \\ AI24BTECH11012\\IIT Hyderabad.}
 \date{\today} 
@@ -142,24 +189,178 @@ On solving for $k_1$ and $k_2$ we get $k_1=4$ and $k_2=1$. Thus
 
 \section{Codes}
 \subsection{C code to verify the Area}
-\begin{frame}[fragile]
-\frametitle{C code to verify the Area}
-We can us the following code to verify that the area we found is correct:
 
- \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/area_between_curves.c}}}
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{C code to verify the Area}
+\begin{mintedbox}{c}[break at=.8\textheight]
+#include <stdio.h>
+#include <math.h>
+
+// Define the functions for the curve and the line
+double curve(double x) {
+    return x * x / 4.0;  // y = x^2 / 4
+}
+
+double line(double x) {
+    return (x + 2) / 4.0;  // y = (x + 2) / 4
+}
+
+// Numerical integration using the trapezoidal rule
+double integrate(double (*f1)(double), double (*f2)(double), double a, double b, int n) {
+    double h = (b - a) / n;  // Step size
+    double area = 0.0;
+
+    for (int i = 0; i < n; i++) {
+        double x1 = a + i * h;
+        double x2 = a + (i + 1) * h;
+
+        // Area of trapezoid between the functions
+        double y1 = f2(x1) - f1(x1);
+        double y2 = f2(x2) - f1(x2);
+
+        area += 0.5 * (y1 + y2) * h;
+    }
+
+    return area;
+}
+
+int main() {
+    // Define integration bounds
+    double a = -1.0;
+    double b = 2.0;
+    int n = 10000;  // Number of intervals for better accuracy
+
+    // Calculate area
+    double area = integrate(curve, line, a, b, n);
+
+    // Write result to area.txt
+    FILE *file = fopen("area.txt", "w");
+    if (file != NULL) {
+        fprintf(file, "Area between the curve and the line: %f\n", area);
+        fclose(file);
+        printf("Area has been written to area.txt\n");
+    } else {
+        printf("Error opening file!\n");
+    }
+
+    return 0;
+}
+
+  \end{mintedbox}
 \end{frame}
 
-\subsection{Generating Parabola and Plotting the Figure}
-\begin{frame}[Fragile]
-\frametitle{Generating Parabola and Plotting the Figure}
-    We can use the following C code to generate points that lie on the parabola:
+\subsection{Generating Parabola using C}
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Generating Parabola using C}
+  \begin{mintedbox}{c}[break at=.8\textheight]
+#include <stdio.h>
+#include <math.h>
 
-    \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/generate_parabola.c}}}
+int main() {
+    FILE *file;
+    file = fopen("parabola_points.txt", "w");
 
-    We can then use the following Python code to generate the figure:
-    
-    \resizebox{\textwidth}{!}{\fbox{\url{https://github.com/GPushkar16/EE1030/blob/main/Matgeo/question-4/codes/plot.py}}}
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
 
+    // Generate points for the parabola x^2 = 4y
+    float x, y;
+    float step = 0.1;  // Step size for x
+    float x_max = 5;  // Maximum value of x (you can adjust as needed)
+
+    for (x = -x_max; x <= x_max; x += step) {
+        y = (x * x) / 4.0;
+        fprintf(file, "%f %f\n", x, y);
+    }
+
+    fclose(file);
+    printf("Points have been written to parabola_points.txt\n");
+    return 0;
+}
+}
+  \end{mintedbox}
+  
+  \end{frame}
+  
+  \subsection{Plotting the figure using Python}
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Plotting the figure using Python}
+   \begin{mintedbox}{Python}[break at=.8\textheight]
+import sys                                  
+sys.path.insert(0, '/home/pushkar/matgeo/codes/CoordGeo')    
+import numpy as np
+import numpy.linalg as LA
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+from line.funcs import *
+from conics.funcs import *
+from triangle.funcs import *
+import params
+A = np.array([2,1])
+B = np.array([-1, 0.25])
+import matplotlib.pyplot as plt
+
+# Initialize lists for x and y coordinates
+x_vals = []
+y_vals = []
+
+# Read points from the file
+with open("parabola_points.txt", "r") as file:
+    for line in file:
+        x, y = map(float, line.split())
+        x_vals.append(x)
+        y_vals.append(y)
+
+# Plot the points
+plt.plot(x_vals, y_vals, label="$x^2 = 4y$")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Parabola: $x^2 = 4y$')
+
+# use set_position
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
+
+#Plotting all line
+
+# Define the range of y values
+y = np.linspace(-1, 2, 100)
+
+# Define the equation x = 4y - 2
+x = 4 * y - 2
+
+# Create the plot
+plt.plot(x, y, label='x = 4y - 2')
+
+
+
+#Labeling the coordinates
+tri_coords = np.vstack((A,B)).T
+plt.scatter(tri_coords[0,:], tri_coords[1,:])
+vert_labels = ['A(2,1)','B(-1,0.25)']
+for i, txt in enumerate(vert_labels):
+       plt.annotate(txt,      # this is the text
+                 (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
+                 textcoords="offset points",   # how to position the text
+                 xytext=(0,10),     # distance from text to points (x,y)
+                 ha='center')     # horizontal alignment can be left, right or center
+
+
+#plt.fill_between(x1,x2,O,color='green', alpha=.2)
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid(True) # minor
+plt.axis('equal')
+plt.savefig('plot')
+
+  \end{mintedbox}
 \end{frame}
 
 \section{Figure}
