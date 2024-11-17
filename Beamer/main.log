@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  6 NOV 2024 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.5)  6 NOV 2024 16:59
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -916,55 +916,6 @@ File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
-
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box128
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen340
-\pgf@nodesepend=\dimen341
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks50
-\verbatim@line=\toks51
-\verbatim@in@stream=\read3
-)
-(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-\tcb@titlebox=\box129
-\tcb@upperbox=\box130
-\tcb@lowerbox=\box131
-\tcb@phantombox=\box132
-\c@tcbbreakpart=\count367
-\c@tcblayer=\count368
-\c@tcolorbox@number=\count369
-\l__tcobox_tmpa_box=\box133
-\l__tcobox_tmpa_dim=\dimen342
-\tcb@temp=\box134
-\tcb@temp=\box135
-\tcb@temp=\box136
-\tcb@temp=\box137
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
-Library (tcolorbox): 'tcbminted.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
 
@@ -974,11 +925,11 @@ b
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count370
-\FV@InFile=\read4
-\FV@TabBox=\box138
-\c@FancyVerbLine=\count371
-\FV@StepNumber=\count372
+\FV@CodeLineNo=\count367
+\FV@InFile=\read3
+\FV@TabBox=\box128
+\c@FancyVerbLine=\count368
+\FV@StepNumber=\count369
 \FV@OutFile=\write5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -987,58 +938,58 @@ tim
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
-\linenopenalty=\count373
-\output=\toks52
-\linenoprevgraf=\count374
-\linenumbersep=\dimen343
-\linenumberwidth=\dimen344
-\c@linenumber=\count375
-\c@pagewiselinenumber=\count376
-\c@LN@truepage=\count377
-\c@internallinenumber=\count378
-\c@internallinenumbers=\count379
-\quotelinenumbersep=\dimen345
-\bframerule=\dimen346
-\bframesep=\dimen347
-\bframebox=\box139
-\linenoamsmath@ams@eqpen=\count380
+\linenopenalty=\count370
+\output=\toks50
+\linenoprevgraf=\count371
+\linenumbersep=\dimen340
+\linenumberwidth=\dimen341
+\c@linenumber=\count372
+\c@pagewiselinenumber=\count373
+\c@LN@truepage=\count374
+\c@internallinenumber=\count375
+\c@internallinenumbers=\count376
+\quotelinenumbersep=\dimen342
+\bframerule=\dimen343
+\bframesep=\dimen344
+\bframebox=\box129
+\linenoamsmath@ams@eqpen=\count377
 LaTeX Info: Redefining \\ on input line 3180.
 )
-\c@FancyVerbWriteLine=\count381
-\c@FancyVerbBufferIndex=\count382
-\c@FancyVerbBufferLength=\count383
-\c@FancyVerbBufferLine=\count384
-\c@FV@oldbufferlength=\count385
-\c@FV@TrueTabGroupLevel=\count386
-\c@FV@TrueTabCounter=\count387
-\FV@TabBox@Group=\box140
+\c@FancyVerbWriteLine=\count378
+\c@FancyVerbBufferIndex=\count379
+\c@FancyVerbBufferLength=\count380
+\c@FancyVerbBufferLine=\count381
+\c@FV@oldbufferlength=\count382
+\c@FV@TrueTabGroupLevel=\count383
+\c@FV@TrueTabCounter=\count384
+\FV@TabBox@Group=\box130
 \FV@TmpLength=\skip72
-\c@FV@HighlightLinesStart=\count388
-\c@FV@HighlightLinesStop=\count389
-\FV@LoopCount=\count390
-\FV@NCharsBox=\box141
-\FV@BreakIndent=\dimen348
-\FV@BreakIndentNChars=\count391
-\FV@BreakSymbolSepLeft=\dimen349
-\FV@BreakSymbolSepLeftNChars=\count392
-\FV@BreakSymbolSepRight=\dimen350
-\FV@BreakSymbolSepRightNChars=\count393
-\FV@BreakSymbolIndentLeft=\dimen351
-\FV@BreakSymbolIndentLeftNChars=\count394
-\FV@BreakSymbolIndentRight=\dimen352
-\FV@BreakSymbolIndentRightNChars=\count395
-\c@FancyVerbLineBreakLast=\count396
-\FV@LineBox=\box142
-\FV@LineIndentBox=\box143
-\c@FV@BreakBufferDepth=\count397
-\FV@LineWidth=\dimen353
+\c@FV@HighlightLinesStart=\count385
+\c@FV@HighlightLinesStop=\count386
+\FV@LoopCount=\count387
+\FV@NCharsBox=\box131
+\FV@BreakIndent=\dimen345
+\FV@BreakIndentNChars=\count388
+\FV@BreakSymbolSepLeft=\dimen346
+\FV@BreakSymbolSepLeftNChars=\count389
+\FV@BreakSymbolSepRight=\dimen347
+\FV@BreakSymbolSepRightNChars=\count390
+\FV@BreakSymbolIndentLeft=\dimen348
+\FV@BreakSymbolIndentLeftNChars=\count391
+\FV@BreakSymbolIndentRight=\dimen349
+\FV@BreakSymbolIndentRightNChars=\count392
+\c@FancyVerbLineBreakLast=\count393
+\FV@LineBox=\box132
+\FV@LineIndentBox=\box133
+\c@FV@BreakBufferDepth=\count394
+\FV@LineWidth=\dimen350
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -1052,46 +1003,103 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "main.w18")...executed.
 
- (./main.w18)
-runsystem(rm -- "main.w18")...executed.
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count398
-\xs_countb=\count399
+\xs_counta=\count395
+\xs_countb=\count396
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip73
-\fb@frw=\dimen354
-\fb@frh=\dimen355
-\FrameRule=\dimen356
-\FrameSep=\dimen357
+\fb@frw=\dimen351
+\fb@frh=\dimen352
+\FrameRule=\dimen353
+\FrameSep=\dimen354
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count400
-\float@exts=\toks53
-\float@box=\box144
-\@float@everytoks=\toks54
-\@floatcapt=\box145
+\c@float@type=\count397
+\float@exts=\toks51
+\float@box=\box134
+\@float@everytoks=\toks52
+\@floatcapt=\box135
 )
-\minted@appexistsfile=\read5
-\minted@bgbox=\box146
+\minted@appexistsfile=\read4
+\minted@bgbox=\box136
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count401
-\c@minted@pygmentizecounter=\count402
-\@float@every@listing=\toks55
-\c@listing=\count403
+\c@minted@FancyVerbLineTemp=\count398
+\c@minted@pygmentizecounter=\count399
+\@float@every@listing=\toks53
+\c@listing=\count400
 )
-runsystem(mkdir -p _minted-main)...executed.
+runsystem(mkdir -p _minted-main)...disabled (restricted).
 
 
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 
+     
+? 
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box137
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen355
+\pgf@nodesepend=\dimen356
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks54
+\verbatim@line=\toks55
+\verbatim@in@stream=\read5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box138
+\tcb@upperbox=\box139
+\tcb@lowerbox=\box140
+\tcb@phantombox=\box141
+\c@tcbbreakpart=\count401
+\c@tcblayer=\count402
+\c@tcolorbox@number=\count403
+\l__tcobox_tmpa_box=\box142
+\l__tcobox_tmpa_dim=\dimen357
+\tcb@temp=\box143
+\tcb@temp=\box144
+\tcb@temp=\box145
+\tcb@temp=\box146
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+Library (tcolorbox): 'tcbminted.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
 Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
@@ -1198,10 +1206,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 114.
 
-runsystem(command -v pygmentize && touch main.aex)...executed.
+runsystem(command -v pygmentize && touch main.aex)...disabled (restricted).
 
-runsystem(rm main.aex)...executed.
 
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 \begin{document}
+                      
+? 
 (./main.aux)
 \openout1 = `main.aux'.
 
@@ -1421,16 +1438,8 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 \g__tcobox_out_iow=\write8
 \openout8 = `main.listing'.
 
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-main/de
-fault.pygstyle)...executed.
-
 
 (./_minted-main/default.pygstyle)
-runsystem(pygmentize -l 'c' -f latex -P commandprefix=PYG -F tokenmerge -P stri
-pnl='False' -F gobble:n='0' -o _minted-main/401B4ABC705FEEE4742ACAB2FBA68F63C89
-F7AE7C8039ED61D94BD00560779A0.pygtex main.listing)...executed.
-
-
 (./_minted-main/401B4ABC705FEEE4742ACAB2FBA68F63C89F7AE7C8039ED61D94BD00560779A
 0.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
@@ -1451,10 +1460,6 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
  (./main.vrb
 \openout8 = `main.listing'.
 
-runsystem(pygmentize -l 'c' -f latex -P commandprefix=PYG -F tokenmerge -P stri
-pnl='False' -F gobble:n='0' -o _minted-main/7F9AA391CF6B7C82233D19D6A649F585C89
-F7AE7C8039ED61D94BD00560779A0.pygtex main.listing)...executed.
-
 
 (./_minted-main/7F9AA391CF6B7C82233D19D6A649F585C89F7AE7C8039ED61D94BD00560779A
 0.pygtex)) [12
@@ -1467,10 +1472,6 @@ F7AE7C8039ED61D94BD00560779A0.pygtex main.listing)...executed.
 
  (./main.vrb
 \openout8 = `main.listing'.
-
-runsystem(pygmentize -l 'Python' -f latex -P commandprefix=PYG -F tokenmerge -P
- stripnl='False' -F gobble:n='0' -o _minted-main/120F5317426F5028E7D7F3D82BEDFF
-CE99723D115E433ECCA3D4C54CD3DA1A20.pygtex main.listing)...executed.
 
 
 (./_minted-main/120F5317426F5028E7D7F3D82BEDFFCE99723D115E433ECCA3D4C54CD3DA1A2
@@ -1517,14 +1518,12 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: 7E4F932E43749883AC28F85A2FA4C233;2066
 (rerunfilecheck)             After:  0D86C2915550557EEDD9434CDDA268F0;2066.
-runsystem(rm main.pyg)...executed.
-
  ) 
 Here is how much of TeX's memory you used:
- 36791 strings out of 474222
- 755297 string characters out of 5748734
+ 36783 strings out of 474222
+ 755184 string characters out of 5748734
  1949975 words of memory out of 5000000
- 58279 multiletter control sequences out of 15000+600000
+ 58274 multiletter control sequences out of 15000+600000
  568744 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,131p,565b,1270s stack positions out of 10000i,1000n,20000p,200000b,200000s
