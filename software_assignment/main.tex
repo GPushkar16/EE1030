@@ -1,32 +1,47 @@
-\documentclass{article}
-\usepackage[preprint]{neurips_2024}
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1\2, etc.
-\usepackage{microtype}      % microtypography
-\usepackage{xcolor}         % colors
-\usepackage{amsmath}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%----------------------------------------------------------------------------------
+% DO NOT Change this is the required setting A4 page, 11pt, onside print, book style
+%%----------------------------------------------------------------------------------
+\documentclass[a4paper,11pt,oneside]{report} 
+\usepackage{CS_report} % DO NOT REMOVE THIS LINE. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Software Assignment Report}
-\author{
- Pushkar Gudla-AI24BTECH11012 \\
- Department of AI \\
- \texttt{ai24btech11012@iith.ac.in}
- }
 
-\begin{document}              
-\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+  
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{titlepage}      
+        \begin{center}
+        \linespread{4}\huge {           
+                Software Assignment Report
+}\\
+            {\Large 
+                Pushkar Gudla-AI24BTECH11012             
+            }\\[2.5cm] 
+            \vfill
+            
+            
+            \today % Please update this date you can use \date{April 2020} for fixed date
+        \end{center}
+    \end{titlepage}
+    \newpage    
+    \tableofcontents
 
-\section{ Introduction}
-This report presents an algorithm implemented in C for computing the eigenvalues of a square matrix. The algorithm leverages two key numerical techniques: Hessenberg decomposition and the QR algorithm with shifts. By combining these methods, it achieves computational efficiency and robustness in eigenvalue computation. This document provides a detailed explanation of the underlying algorithm, evaluates its strengths and weaknesses, and offers a clear understanding of the C code implementation.
+\newpage
+\chapter{Introduction}
+This report presents a comprehensive discussion of an algorithm implemented in C for efficiently computing the eigenvalues of a square matrix. Eigenvalue computation is a fundamental problem in numerical linear algebra, with applications spanning diverse fields such as physics, engineering, computer science, and data analysis. The proposed algorithm combines two pivotal numerical techniques—Hessenberg decomposition and the QR algorithm with shifts—to achieve a balance between computational efficiency and numerical robustness.
+\\
 
-\section{ Algorithm Overview}
+Hessenberg decomposition serves as an essential preprocessing step, reducing the input matrix to a nearly triangular form while preserving its eigenvalues. This reduction simplifies subsequent computations and significantly enhances the overall performance of the algorithm. The QR algorithm with shifts, a widely recognized iterative method, is then employed to extract eigenvalues with improved convergence rates. By incorporating shifts, the algorithm accelerates convergence and mitigates numerical instability, making it well-suited for practical applications.\
+\\
 
-\subsection{ Step 1: Hessenberg Decomposition}
+This document provides a detailed exploration of the algorithm's theoretical foundations, elucidating how each component contributes to the solution of the eigenvalue problem. It also examines the C code implementation, offering insights into the design choices, data structures, and optimization strategies employed to ensure high performance. Furthermore, the report critically evaluates the algorithm's strengths, such as its computational efficiency and adaptability, while addressing potential limitations and areas for improvement.
+
+\chapter{ Algorithm Overview}
+
+\section{ Step 1: Hessenberg Decomposition}
 Hessenberg decomposition is an essential preprocessing step for eigenvalue computation. It simplifies a general square matrix \( A \) into a Hessenberg matrix \( H \), which retains the same eigenvalues but has a specific structure:\\
 - Elements below the first subdiagonal are zero, while the upper part of the matrix is preserved.\\
 - For example, for a \( 4 \times 4 \) matrix:\\
@@ -46,7 +61,7 @@ H = Q^\top AQ
 \]
 where $Q$ is an orthogonal matrix.
 
-Since similarity transformations involve only pre and post multiplication of matrix $A$ by $Q$ and $Q^\top$, the eigenvalues of $A$ remain unchanged. This property ensures that we can work with a simpler matrix $H$ without altering the final result.
+Since similarity transformations involve only pre and post multiplication of matrix $A$ by $Q$ and $Q^\top$, the eigenvalues of $A$ remain unchanged. This property ensures that we can work with a simpler matrix $H$ without altering the final result.\\
 
 \textbf{Role of Householder Reflections}
 
@@ -69,33 +84,34 @@ For Hessenberg reduction:
     \]
     This process is repeated iteratively for each column, gradually transforming the entire matric into Hessenberg form.
 \end{enumerate}
-\subsection{ Step 2: QR Algorithm}
-The QR algorithm is an iterative process to find the eigenvalues of a matrix:
+
+\section{ Step 2: QR Algorithm}
+The QR algorithm is an iterative method widely used to compute the eigenvalues of a matrix. It operates as follows:
 \begin{enumerate}
-\item Factorization: The current matrix \( H \) is decomposed into two matrices:
+
+\item Factorization: At each iteration, the current matrix \( H \) is decomposed into two matrices:
 \begin{itemize}
-   \item \( Q \): An orthogonal matrix.
+
+   \item \( Q \): An orthogonal matrix, whose columns are orthonormal vectors.
    \item \( R \): An upper triangular matrix.
+   This factorization satisfies the relationship \( H = QR \), leveraging the orthogonality of \( Q \) to preserve numerical stability during computations.
 \end{itemize}
-This decomposition satisfies \( H = QR \).
-   
-\item Matrix Update:
-   The next matrix in the sequence is computed as \( H' = RQ \). Iteratively applying this transformation drives \( H \) toward an upper triangular form.
+\item Matrix Update: The matrix is updated by reversing the roles of \( Q \) and \( R \), forming a new matrix \( H' \) as \( H' = RQ \). This transformation maintains similarity to the original matrix, ensuring the eigenvalues remain unchanged. With each iteration, this process progressively drives \( H \) closer to an upper triangular form.
 
-\item Eigenvalue Extraction:
-   When \( H \) converges to an upper triangular matrix, the diagonal entries of \( H \) represent the eigenvalues of the original matrix.
+\item Eigenvalue Extraction: Once \( H \) converges to an upper triangular matrix (or nearly so), its diagonal entries approximate the eigenvalues of the original matrix. For matrices with real eigenvalues, this triangular form is direct. For complex eigenvalues, patterns such as 2x2 blocks represent conjugate pairs.
 \end{enumerate}
+This iterative refinement enables the QR algorithm to efficiently compute eigenvalues for a broad range of matrices, including non-symmetric and complex cases, while maintaining numerical robustness.
 
-\subsection{ Step 3: Accelerated Convergence with Shifts}
-A shift \( \sigma \) is introduced to accelerate the algorithm. Instead of directly working with \( H \), the algorithm processes \( H - \sigma I \), where \( I \) is the identity matrix. After each iteration, the shift is adjusted based on the current matrix properties, significantly improving convergence speed for matrices with close eigenvalues.
+\section{ Step 3: Accelerated Convergence with Shifts}
+To accelerate the convergence of the QR algorithm, a strategically chosen shift \(\sigma\) is introduced, transforming the matrix \(H\) into \(H - \sigma I\), where \(I\) is the identity matrix of the same size as \(H\). This shift serves to improve the numerical properties of the matrix during iteration, effectively targeting eigenvalues and enhancing the convergence rate. By focusing the algorithm on specific regions of the spectrum, the shift reduces the number of iterations required to achieve eigenvalue separation, particularly for matrices with closely spaced eigenvalues. After each iteration, the value of \(\sigma\) is dynamically adjusted based on the properties of the current matrix, such as the entries in its subdiagonal or its largest eigenvalue estimates. This adaptability is critical for dealing with matrices where eigenvalues are clustered, as it prevents stagnation and ensures steady progress toward convergence. The use of shifts not only accelerates the process but also contributes to numerical stability, as it minimizes the accumulation of rounding errors that can occur in floating-point computations. This approach is a cornerstone of modern eigenvalue algorithms, enabling them to efficiently handle complex and high-dimensional matrices in practical applications.
 
-\subsection{ Handling Complex Eigenvalues}
-If the matrix has complex eigenvalues, the algorithm identifies them through convergence patterns. These values are extracted and represented using a structure for complex numbers.
+\section{ Handling Complex Eigenvalues}
+When a matrix has complex eigenvalues, the algorithm detects them through specific convergence patterns, such as oscillations in subdiagonal entries or the formation of 2x2 blocks in the Hessenberg form. These blocks are used to compute the eigenvalues directly, often as complex conjugate pairs. To represent these values, the algorithm utilizes a structure for complex numbers, storing their real and imaginary components. This approach ensures accurate computation and broad applicability, particularly for non-symmetric matrices encountered in various scientific and engineering fields.
 
-\section{ Implementation Details}
+\chapter{ Implementation Details}
 
-\subsection{ Matrix Initialization}
-The code begins by dynamically allocating memory for the input matrix using a double pointer (2D array). The matrix size \( n \times n \) is specified by the user. The dynamic memory allocation allows flexibility in handling matrices of different sizes:
+\section{ Matrix Initialization}
+The code starts by dynamically allocating memory for the input matrix, implemented as a 2D array using a double pointer. The size of the matrix, \( n \times n \), is determined by user input, providing flexibility to work with matrices of varying dimensions. Dynamic memory allocation ensures efficient use of resources, as memory is allocated only as needed at runtime, avoiding limitations of fixed-size arrays. This approach not only accommodates matrices of different sizes but also allows the algorithm to handle large matrices efficiently within the constraints of available system memory. By organizing the matrix dynamically, the implementation remains scalable and adaptable for diverse applications.
 
 \begin{itemize}
 \item  \textbf{createMatrix}: Allocates memory for the matrix rows and initializes all elements to zero using `calloc`.
@@ -104,33 +120,101 @@ The code begins by dynamically allocating memory for the input matrix using a do
 
 Memory management is carefully handled to prevent leaks. If allocation fails at any stage, the program terminates gracefully.
 
-\subsection{ Hessenberg Reduction}
-The code reduces the input matrix to Hessenberg form by iteratively applying similarity transformations. Each transformation eliminates elements below the first subdiagonal in a column:
-1. For column \( j \), a Householder vector is computed to zero out elements below \( h_{j+1,j} \).
-2. The matrix is updated using this vector, ensuring numerical stability while preserving eigenvalues.
+\section{ Hessenberg Reduction}
+The code begins by reducing the input matrix to Hessenberg form through a series of similarity transformations, which iteratively simplify the matrix while preserving its eigenvalues. For each column \( j \), the algorithm computes a Householder vector designed to eliminate all elements below the subdiagonal entry \( h_{j+1,j} \). This vector is then used to construct a Householder transformation, which is applied to both the rows and columns of the matrix. These transformations ensure numerical stability and maintain the matrix's similarity property, which is critical for accurate eigenvalue computation. By reducing the matrix to Hessenberg form—where all elements below the first subdiagonal are zero—the code optimizes the subsequent QR iterations, significantly improving their efficiency and convergence properties.
 
-This reduction significantly simplifies the subsequent QR iterations.
+\section{ QR Iteration with Shifts}
 
-\subsection{ QR Iteration with Shifts}
-Once the matrix is in Hessenberg form, the QR algorithm is applied. The iterative process involves:
-\begin{enumerate}
+Once a matrix is transformed into Hessenberg form, the QR algorithm is applied iteratively. This method is used to compute the eigenvalues of a matrix with improved numerical efficiency and stability. Below is a detailed breakdown of the process:
+ 1. QR Factorization
+ \begin{itemize}
 
-\item  QR Factorization:\\
-   - The Hessenberg matrix \( H \) is decomposed into \( Q \) and \( R \) using Gram-Schmidt orthogonalization or a similar method.
-\item Shifted Update:\\
-   - A shift \( \sigma \) is applied to modify the matrix as \( H - \sigma I \) before factorization. After the QR iteration, the shift is removed by reversing the operation.
-\item Convergence Check:\\
-   - The iteration continues until the off-diagonal elements are sufficiently small (determined by a tolerance parameter `EPSILON`) or until the maximum iteration limit (`MAX\_ITER`) is reached.
-\end{enumerate}
-\subsection{ Complex Eigenvalue Handling}
-The code includes a custom data structure (`ComplexNum`) to handle complex eigenvalues. This structure stores the real and imaginary parts separately. The algorithm identifies complex eigenvalues by analyzing convergence patterns in the QR iterations.
+   \item Objective: Decompose the Hessenberg matrix \( H \) into the product of two matrices:
+     \[
+     H = Q \cdot R
+     \]
+     where:
+     \begin{itemize}
+     \item \( Q \): An orthogonal matrix (\( Q^T Q = I \)), which ensures the numerical stability of the process.
+     \item \( R \): An upper triangular matrix, retaining the structure essential for iteration.
+\end{itemize}
+   \item How It’s Done: 
+   \begin{itemize}
+     \item Algorithms such as Gram-Schmidt orthogonalization, Householder reflections, or Givens rotations are employed to perform the factorization.
+     \item For Hessenberg matrices, the sparsity of the lower part (mostly zero) allows for computational efficiency, significantly reducing the number of operations required.
+\end{itemize}
+   \item Outcome:
+   \begin{itemize}
+       \item The QR factorization provides matrices \( Q \) and \( R \), which are then used to update the Hessenberg matrix \( H \) in subsequent iterations.
+   \end{itemize}
+   \end{itemize}
+ 2. Shifted QR Iteration
+ \begin{itemize}
+   \item Purpose of the Shift:
+   \begin{itemize}
+       \item To accelerate convergence, a scalar shift \( \sigma \) is introduced before the QR factorization. The shift improves numerical efficiency by targeting eigenvalues and reducing the number of iterations needed.
+   \end{itemize}
 
-\subsection{ Output}
+   \item Shift Selection:
+     \begin{itemize}
+         \item A common choice for \( \sigma \) is based on the Rayleigh quotient or Wilkinson’s shift, which approximate an eigenvalue near the bottom-right corner of the matrix. These strategies ensure faster localization of eigenvalues.
+     \end{itemize}
+
+   \item Modified QR Decomposition:
+   \begin{itemize}
+       \item The shift modifies the matrix as follows:
+       \[
+       \tilde{H} = H - \sigma I
+       \]
+       where \( I \) is the identity matrix.
+   \end{itemize}
+
+   \item  Reversing the Shift:
+     \begin{itemize}
+         \item After performing QR factorization on \( \tilde{H} \), the shift is removed by reversing the transformation:
+       \[
+       H' = R \cdot Q + \sigma I
+       \]
+       Here, \( Q \) and \( R \) are the orthogonal and triangular matrices obtained from the factorization of \( \tilde{H} \).
+     \end{itemize}
+   \item Preservation of Structure:
+     \begin{itemize}
+         \item The matrix \( H' \) remains in Hessenberg form after each iteration, which is a crucial property of the QR algorithm. This ensures that subsequent steps are computationally efficient.
+     \end{itemize}
+     \end{itemize}
+
+ 3. Convergence Check
+ \begin{itemize}
+   \item Objective: Determine whether the algorithm has converged to the desired result, i.e., whether the matrix is close enough to an upper triangular form.
+
+   \item Criteria:
+   \begin{itemize}
+       \item Off-Diagonal Tolerance:
+       \begin{itemize}
+           \item The algorithm monitors the size of the off-diagonal elements (particularly those below the main diagonal).
+           \item If the absolute value of these elements is smaller than a pre-specified tolerance \( \text{EPSILON} \) (e.g., \( 10^{-8} \)), they are considered negligible, indicating convergence.
+       \end{itemize}
+       \item Maximum Iterations:
+       \begin{itemize}
+           \item A maximum iteration count \( \text{MAX\_ITER} \) is set to prevent infinite loops in cases where convergence is slow or does not occur.
+       \end{itemize}
+   \end{itemize}
+
+   \item Result:
+   \begin{itemize}
+       \item If convergence criteria are met, the algorithm terminates. At this point, the diagonal elements of \( H \) approximate the eigenvalues of the original matrix.
+       \item If not, the process is repeated with a new shift \( \sigma \) and the updated matrix \( H' \).
+   \end{itemize}
+\end{itemize}
+\section{ Complex Eigenvalue Handling}
+The QR algorithm incorporates a custom data structure, `ComplexNum`, to efficiently handle complex eigenvalues that arise during iterations. This structure separates the real and imaginary components, providing a clear and organized representation. Complex eigenvalues are identified through convergence patterns observed in the subdiagonal elements of the Hessenberg matrix during QR iterations. Specifically, when these elements stabilize at nonzero values, they indicate the presence of a complex conjugate pair. The real part of the eigenvalue is computed as the average of the diagonal elements of a \( 2 \times 2 \) block, while the imaginary part is derived from the product of the off-diagonal elements. The `ComplexNum` structure simplifies storing and processing such eigenvalues, allowing for precise numerical operations and easy integration into the algorithm, enhancing its robustness in handling general matrices.
+
+\section{ Output}
 The eigenvalues are printed in either real or complex form. Real eigenvalues are directly extracted from the diagonal of the converged upper triangular matrix. Complex eigenvalues are output using the `ComplexNum` structure.
 
-\section{ Strengths and Weaknesses}
+\chapter{ Strengths and Weaknesses}
 
-\subsection{ Strengths}
+\section{ Strengths}
 \begin{enumerate}
 \item  \textbf{Computational Efficiency:}
     \begin{itemize}
@@ -155,7 +239,7 @@ The eigenvalues are printed in either real or complex form. Real eigenvalues are
     \item Using orthogonal transformations helps maintain numerical stability during Hessenberg reduction and QR iterations, ensuring accurate results even for moderately large matrices.
 \end{itemize}
 \end{enumerate}
-\subsection{ Weaknesses}
+\section{ Weaknesses}
 \begin{enumerate}
     \item \textbf{Numerical Stability}: While the algorithm is numerically stable for many matrices, it can encounter issues with poorly conditioned or ill-posed problems:
     \begin{itemize}
@@ -191,7 +275,10 @@ The eigenvalues are printed in either real or complex form. Real eigenvalues are
 \end{enumerate} 
 
 
-\section{ Conclusion}
-The algorithm implemented in this code combines Hessenberg decomposition and QR shifts to provide an efficient and versatile method for eigenvalue computation. While the implementation is robust for most practical applications, addressing numerical stability and optimizing memory usage could further enhance its utility. This code offers a strong foundation for exploring eigenvalue problems in numerical linear algebra.
+\chapter{ Conclusion}
+The algorithm implemented in this code integrates Hessenberg decomposition with QR shifts to deliver an efficient and powerful method for computing eigenvalues of general matrices. By first reducing the input matrix to Hessenberg form, it simplifies the structure while preserving eigenvalues, significantly enhancing computational efficiency. The subsequent use of QR iterations, augmented by carefully chosen shifts, ensures rapid convergence, even for challenging matrices. This combination of techniques makes the implementation both versatile and effective, addressing a wide range of eigenvalue problems encountered in numerical linear algebra. The algorithm’s structure inherently exploits the sparsity and symmetry of the Hessenberg form, minimizing unnecessary computations and reducing runtime.
+\\
 
+While the implementation is robust for most practical applications, there is room for further refinement to improve performance and reliability. Enhancing numerical stability, especially for ill-conditioned matrices, could involve incorporating more advanced shift strategies or using higher-precision arithmetic where needed. Additionally, optimizing memory usage by leveraging in-place operations and reducing redundant data storage would make the algorithm more suitable for large-scale problems. Despite these potential improvements, the current implementation provides a solid and practical foundation for exploring eigenvalue computations, serving as a valuable tool in both academic and applied contexts of numerical analysis.
+    
 \end{document}
